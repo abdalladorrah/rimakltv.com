@@ -6,7 +6,7 @@
 * License: https://bootstrapmade.com/license/
 */
 
-(function () {
+(function() {
   "use strict";
 
   /**
@@ -111,7 +111,7 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function (e) {
+  on('click', '.mobile-nav-toggle', function(e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -120,7 +120,7 @@
   /**
    * Mobile nav dropdowns activate
    */
-  on('click', '.navbar .dropdown > a', function (e) {
+  on('click', '.navbar .dropdown > a', function(e) {
     if (select('#navbar').classList.contains('navbar-mobile')) {
       e.preventDefault()
       this.nextElementSibling.classList.toggle('dropdown-active')
@@ -130,7 +130,7 @@
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function (e) {
+  on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -181,7 +181,7 @@
     new Waypoint({
       element: skilsContent,
       offset: '80%',
-      handler: function (direction) {
+      handler: function(direction) {
         let progress = select('.progress .progress-bar', true);
         progress.forEach((el) => {
           el.style.width = el.getAttribute('aria-valuenow') + '%'
@@ -191,38 +191,56 @@
   }
 
   /**
-   * Roadmap Scroll Animation
+   * Porfolio isotope and filter
    */
   window.addEventListener('load', () => {
-    const steps = document.querySelectorAll('.step-item');
-    const progressLine = document.getElementById('timelineProgress');
+    let portfolioContainer = select('.portfolio-container');
+    if (portfolioContainer) {
+      let portfolioIsotope = new Isotope(portfolioContainer, {
+        itemSelector: '.portfolio-item'
+      });
 
-    if (steps.length > 0 && progressLine) {
-      const updateRoadmap = () => {
-        let activeIndex = -1;
+      let portfolioFilters = select('#portfolio-flters li', true);
 
-        steps.forEach((step, index) => {
-          const rect = step.getBoundingClientRect();
-          // تفعيل النقطة إذا وصلت إلى 75% من الشاشة أثناء النزول
-          if (rect.top < window.innerHeight * 0.75) {
-            step.classList.add('active');
-            activeIndex = index;
-          } else {
-            step.classList.remove('active');
-          }
+      on('click', '#portfolio-flters li', function(e) {
+        e.preventDefault();
+        portfolioFilters.forEach(function(el) {
+          el.classList.remove('filter-active');
         });
+        this.classList.add('filter-active');
 
-        // حساب طول الخط الذهبي
-        if (activeIndex >= 0) {
-          const progressPercentage = (activeIndex / (steps.length - 1)) * 100;
-          progressLine.style.height = `calc(${progressPercentage}% + 30px)`;
-        } else {
-          progressLine.style.height = '0%';
-        }
-      };
+        portfolioIsotope.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+        portfolioIsotope.on('arrangeComplete', function() {
+          AOS.refresh()
+        });
+      }, true);
+    }
 
-      window.addEventListener('scroll', updateRoadmap);
-      updateRoadmap(); // تحديث الحالة عند فتح الصفحة
+  });
+
+  /**
+   * Initiate portfolio lightbox 
+   */
+  const portfolioLightbox = GLightbox({
+    selector: '.portfolio-lightbox'
+  });
+
+  /**
+   * Portfolio details slider
+   */
+  new Swiper('.portfolio-details-slider', {
+    speed: 400,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
     }
   });
 

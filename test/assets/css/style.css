@@ -10,8 +10,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: 'Tajawal', sans-serif;
-  /* استخدم خطوط Tajawal */
+  font-family: 'Tajawal', sans-serif; /* استخدم خطوط Tajawal */
   color: #E5E5E5;
 }
 
@@ -31,8 +30,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Tajawal', sans-serif;
-  /* استخدم خطوط Tajawal */
+  font-family: 'Tajawal', sans-serif; /* استخدم خطوط Tajawal */
 }
 
 
@@ -120,7 +118,7 @@ h6 {
 
 #header.header-scrolled,
 #header.header-inner-pages {
-  background: rgba(28, 28, 28, 0.9);
+  background: rgba(28,28,28,0.9);
 }
 
 #header .logo {
@@ -307,7 +305,7 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(28, 28, 28, 0.9);
+  background: rgba(28,28,28,0.9);
   transition: 0.3s;
   z-index: 999;
 }
@@ -889,7 +887,7 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(28, 28, 28, 0.9), rgba(28, 28, 28, 0.9)), url("../img/skills.png") fixed center center;
+  background: linear-gradient(rgba(28,28,28,0.9), rgba(28,28,28,0.9)), url("../img/skills.png") fixed center center;
   background-size: cover;
   padding: 120px 0;
 }
@@ -902,7 +900,7 @@ section {
 
 .cta p {
   color: #fff;
-
+  
 }
 
 .cta .cta-btn {
@@ -938,162 +936,160 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Roadmap Section (Work Process)
+# Portfolio
 --------------------------------------------------------------*/
-.roadmap {
-  background-color: #1C1C1C;
-  /* تتماشى مع خلفية موقعك */
+.portfolio #portfolio-flters {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  margin: 10px 5px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
   color: #E5E5E5;
-  padding: 80px 0;
+  transition: all 0.3s;
+  padding: 8px 20px;
+  border-radius: 50px;
 }
 
-.text-gold {
-  color: #D4AF37;
-  font-weight: bold;
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+  background: #D4AF37;
+  color: #fff;
 }
 
-.timeline-container {
-  position: relative;
-  max-width: 1000px;
-  margin: 50px auto 0;
-  padding: 20px 0;
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
 }
 
-/* الخط العمودي الثابت */
-.timeline-line {
+.portfolio .portfolio-item .portfolio-img {
+  overflow: hidden;
+}
+
+.portfolio .portfolio-item .portfolio-img img {
+  transition: all 0.6s;
+}
+
+.portfolio .portfolio-item .portfolio-info {
+  opacity: 0;
   position: absolute;
-  top: 0;
+  right: 15px;
   bottom: 0;
-  right: 50%;
-  width: 4px;
-  background-color: #333333;
-  transform: translateX(50%);
-  z-index: 1;
-}
-
-/* الخط العمودي المضيء (الذهبي) */
-.timeline-progress {
-  position: absolute;
-  top: 0;
-  right: 50%;
-  width: 4px;
-  background-color: #D4AF37;
-  transform: translateX(50%);
-  height: 0%;
-  z-index: 2;
-  transition: height 0.6s ease-out;
-  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 200px;
   z-index: 3;
+  left: 15px;
+  transition: all 0.3s;
+  background: rgba(28,28,28,0.8);
+  padding: 10px 15px;
 }
 
-.timeline-center {
-  display: flex;
-  justify-content: center;
+.portfolio .portfolio-item .portfolio-info h4 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0px;
 }
 
-/* الدوائر (الأرقام) */
-.timeline-circle {
-  width: 70px;
-  height: 70px;
-  background-color: #1a1a1a;
-  border: 3px solid #444;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  font-weight: bold;
-  color: #777;
-  transition: all 0.5s ease;
+.portfolio .portfolio-item .portfolio-info p {
+  color: #f9fcfe;
+  font-size: 14px;
+  margin-bottom: 0;
 }
 
-.timeline-text h3 {
+.portfolio .portfolio-item .portfolio-info .preview-link,
+.portfolio .portfolio-item .portfolio-info .details-link {
+  position: absolute;
+  left: 40px;
   font-size: 24px;
-  font-weight: 700;
-  color: #888;
-  transition: all 0.5s ease;
-  transform: translateY(15px);
-  opacity: 0.5;
+  top: calc(50% - 18px);
+  color: #fff;
+  transition: 0.3s;
 }
 
-.timeline-desc p {
-  font-size: 16px;
-  color: #888;
-  transition: all 0.5s ease;
-  transform: translateY(15px);
-  opacity: 0.5;
-  line-height: 1.8;
+.portfolio .portfolio-item .portfolio-info .preview-link:hover,
+.portfolio .portfolio-item .portfolio-info .details-link:hover {
+  color: #D4AF37;
 }
 
-/* محاذاة النصوص في الشاشات الكبيرة */
-@media (min-width: 768px) {
-  .right-text {
-    text-align: left;
-  }
-
-  .left-text {
-    text-align: right;
-  }
-
-  .right-desc {
-    text-align: left;
-  }
-
-  .left-desc {
-    text-align: right;
-  }
+.portfolio .portfolio-item .portfolio-info .details-link {
+  left: 10px;
 }
 
-/* حالات التفعيل عند النزول */
-.step-item.active .timeline-circle {
-  background-color: #D4AF37;
-  border-color: #D4AF37;
-  color: #1C1C1C;
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+.portfolio .portfolio-item:hover .portfolio-img img {
   transform: scale(1.15);
 }
 
-.step-item.active .timeline-text h3 {
-  color: #D4AF37;
-  transform: translateY(0);
+.portfolio .portfolio-item:hover .portfolio-info {
   opacity: 1;
 }
 
-.step-item.active .timeline-desc p {
-  color: #ffffff;
-  transform: translateY(0);
-  opacity: 1;
+/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.portfolio-details {
+  padding-top: 40px;
 }
 
-/* التجاوب مع شاشات الجوال */
-@media (max-width: 767px) {
+.portfolio-details .portfolio-details-slider img {
+  width: 100%;
+}
 
-  .timeline-line,
-  .timeline-progress {
-    right: 30px;
-    transform: none;
-  }
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
 
-  .timeline-center {
-    justify-content: flex-start;
-    padding-right: 15px;
-    margin-bottom: 15px;
-  }
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #D4AF37;
+}
 
-  .timeline-text,
-  .timeline-desc {
-    text-align: right !important;
-    padding-right: 60px;
-  }
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #D4AF37;
+}
 
-  .timeline-text h3 {
-    font-size: 20px;
-  }
+.portfolio-details .portfolio-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(28,28,28,0.08);
+}
+
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.portfolio-details .portfolio-info ul li+li {
+  margin-top: 10px;
+}
+
+.portfolio-details .portfolio-description {
+  padding-top: 30px;
+}
+
+.portfolio-details .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-description p {
+  padding: 0;
 }
 
 /*--------------------------------------------------------------
@@ -1832,8 +1828,7 @@ section {
   position: sticky;
   bottom: 20px;
   right: 20px;
-  background-color: rgba(28, 28, 28, 0.9);
-  /* استخدم اللون المعطى بدلاً من اللون الأزرق */
+  background-color: rgba(28,28,28,0.9); /* استخدم اللون المعطى بدلاً من اللون الأزرق */
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 16px;
@@ -1845,8 +1840,7 @@ section {
 }
 
 #language-bar:hover {
-  background-color: rgba(13, 110, 253, 1);
-  /* تغيير اللون عند التحويم */
+  background-color: rgba(13, 110, 253, 1); /* تغيير اللون عند التحويم */
 }
 
 @media (max-width: 768px) {
@@ -1874,29 +1868,20 @@ body {
 }
 
 /* صناديق الكروت */
-.icon-box,
-.pricing .box,
-.faq .faq-list li,
-.contact .info {
+.icon-box, .pricing .box, .faq .faq-list li, .contact .info {
   background-color: #ffffff;
   color: #1C1C1C;
 }
 
 /* الحقول */
-input,
-textarea {
+input, textarea {
   background-color: #D9D9D9;
   color: #1C1C1C;
   border: 1px solid #D4AF37;
 }
 
 /* الأزرار */
-button,
-.btn,
-.btn-get-started,
-.buy-btn,
-.cta .cta-btn,
-.contact .php-email-form button[type=submit] {
+button, .btn, .btn-get-started, .buy-btn, .cta .cta-btn, .contact .php-email-form button[type=submit] {
   background-color: #D4AF37;
   color: #1C1C1C;
   border: none;
@@ -1904,12 +1889,7 @@ button,
   padding: 10px 20px;
 }
 
-button:hover,
-.btn:hover,
-.btn-get-started:hover,
-.buy-btn:hover,
-.cta .cta-btn:hover,
-.contact .php-email-form button[type=submit]:hover {
+button:hover, .btn:hover, .btn-get-started:hover, .buy-btn:hover, .cta .cta-btn:hover, .contact .php-email-form button[type=submit]:hover {
   background-color: #b28c2e;
   color: #FFFFFF;
 }
@@ -1921,9 +1901,7 @@ a {
 
 
 /* الأيقونات داخل الكروت */
-.icon-box i,
-.pricing .box i,
-.faq .faq-list i {
+.icon-box i, .pricing .box i, .faq .faq-list i {
   color: #D4AF37;
 }
 
@@ -1938,15 +1916,13 @@ a {
   color: #E5E5E5;
 }
 
-#footer h3,
-#footer h4 {
+#footer h3, #footer h4 {
   color: #D4AF37;
 }
 
 #footer a {
   color: #D4AF37;
 }
-
 #footer p {
   color: #ffffff;
 }
