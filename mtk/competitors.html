@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTK | Competitors Analysis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lenci.css">
+    <style>
+        .comp-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .comp-table th, .comp-table td {
+            padding: 15px;
+            text-align: right;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        body.lang-en .comp-table th, 
+        body.lang-en .comp-table td {
+            text-align: left;
+        }
+
+        .comp-table th {
+            background: #f8fafc;
+            font-weight: 800;
+            color: #1e293b;
+        }
+
+        .comp-table tr:last-child td { border-bottom: none; }
+
+        .mtk-row {
+            background: #eff6ff;
+            font-weight: 600;
+        }
+
+        .status-bad { color: #ef4444; font-weight: bold; }
+        .status-ok { color: #f59e0b; font-weight: bold; }
+        .status-good { color: #10b981; font-weight: bold; }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="content-ar" class="visible">
+            <header class="hero">
+                <h1>تحليل المنافسين ⚔️</h1>
+                <div class="tagline">أين يقف MTK اليوم في سوق التدريب؟</div>
+            </header>
+
+            <div class="card">
+                <div class="section-title">المشهد الحالي (The Landscape)</div>
+                <p>المنتج الخاص بنا (الدورات والمدربين) ممتاز، ولكننا نخسر الحصة السوقية لصالح مراكز قد يكون محتواها أضعف، لكن تسويقها أقوى وحضورها الرقمي يبعث على الثقة.</p>
+                
+                <table class="comp-table">
+                    <thead>
+                        <tr>
+                            <th>المركز</th>
+                            <th>قوة المنتج</th>
+                            <th>التواجد الرقمي (الموقع/السوشيال)</th>
+                            <th>ثقة العملاء (Social Proof)</th>
+                            <th>الخلاصة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>المراكز الكبرى القديمة</td>
+                            <td><span class="status-ok">تقليدي وممل</span></td>
+                            <td><span class="status-good">قوي جداً وميزانيات ضخمة</span></td>
+                            <td><span class="status-good">آلاف التقييمات</span></td>
+                            <td>يعتمدون على الاسم القديم، لكنهم بطيئون في التطور.</td>
+                        </tr>
+                        <tr>
+                            <td>المنصات العالمية (Coursera/Udemy)</td>
+                            <td><span class="status-good">قوي وتفاعلي</span></td>
+                            <td><span class="status-good">ممتاز جداً</span></td>
+                            <td><span class="status-good">ملايين التقييمات</span></td>
+                            <td>محتوى عام غير مخصص لبيئة العمل السعودية.</td>
+                        </tr>
+                        <tr class="mtk-row">
+                            <td>MTK (الوضع الحالي)</td>
+                            <td><span class="status-good">قوي ومخصص للمحلي</span></td>
+                            <td><span class="status-bad">ضعيف جداً ومشتت</span></td>
+                            <td><span class="status-bad">شبه معدوم (4 تقييمات)</span></td>
+                            <td>منتج رائع مدفون بسبب ضعف التسويق.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <div class="section-title">الميزة التنافسية (كيف ننتصر؟)</div>
+                <ul>
+                    <li>لن ننافسهم بالميزانيات الضخمة العشوائية.</li>
+                    <li>سننافسهم بـ <strong>التخصيص (Niche Targeting):</strong> استهداف مباشر لمدراء الموارد البشرية عبر LinkedIn.</li>
+                    <li>سننافسهم بـ <strong>تجربة مستخدم سهلة:</strong> تحويل الموقع من مجرد واجهة عرض إلى "أداة توليد عملاء محتملين" (Lead Gen Machine).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="content-en" class="hidden">
+            <header class="hero">
+                <h1>Competitors Analysis ⚔️</h1>
+                <div class="tagline">Where does MTK stand today in the training market?</div>
+            </header>
+
+            <div class="card">
+                <div class="section-title">The Landscape</div>
+                <p>Our product (courses and trainers) is excellent, but we are losing market share to centers that might have weaker content but stronger marketing and a digital presence that inspires trust.</p>
+                
+                <table class="comp-table">
+                    <thead>
+                        <tr>
+                            <th>Center</th>
+                            <th>Product Quality</th>
+                            <th>Digital Presence</th>
+                            <th>Social Proof</th>
+                            <th>Summary</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Large Traditional Centers</td>
+                            <td><span class="status-ok">Traditional/Boring</span></td>
+                            <td><span class="status-good">Very strong, huge budgets</span></td>
+                            <td><span class="status-good">Thousands of reviews</span></td>
+                            <td>Rely on legacy names, but slow to adapt.</td>
+                        </tr>
+                        <tr>
+                            <td>Global Platforms (Udemy)</td>
+                            <td><span class="status-good">Strong & Interactive</span></td>
+                            <td><span class="status-good">Excellent</span></td>
+                            <td><span class="status-good">Millions of reviews</span></td>
+                            <td>Generic content, not localized for the Saudi workplace.</td>
+                        </tr>
+                        <tr class="mtk-row">
+                            <td>MTK (Current State)</td>
+                            <td><span class="status-good">Strong & Localized</span></td>
+                            <td><span class="status-bad">Very weak & scattered</span></td>
+                            <td><span class="status-bad">Almost non-existent (4 reviews)</span></td>
+                            <td>A great product buried by poor marketing.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <div class="section-title">Competitive Advantage (How we win)</div>
+                <ul>
+                    <li>We won't fight them with massive generic budgets.</li>
+                    <li>We will win through <strong>Niche Targeting:</strong> Direct B2B outreach to HR Managers via LinkedIn.</li>
+                    <li>We will win through <strong>Frictionless UX:</strong> Turning the website from a brochure into a Lead Gen Machine.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 MTK. All rights reserved.</p>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    <script src="js/vanta_bg.js"></script>
+</body>
+
+</html>

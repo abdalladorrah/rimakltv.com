@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTK | Master Checklist</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lenci.css">
+
+    <style>
+        .checklist-group {
+            margin-bottom: 30px;
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #e5e7eb;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .checklist-group::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary-color);
+        }
+
+        .group-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 2px solid #f3f4f6;
+            padding-bottom: 15px;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid #f3f4f6;
+            transition: background 0.1s;
+        }
+
+        .checkbox {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #cbd5e1;
+            border-radius: 6px;
+            cursor: pointer;
+            flex-shrink: 0;
+            margin-top: 2px;
+            position: relative;
+        }
+
+        .checkbox.checked {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .checkbox.checked::after {
+            content: '✓';
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .item-text { flex-grow: 1; }
+        .item-title { font-weight: 700; color: var(--text-dark); font-size: 1rem; margin-bottom: 4px; }
+        .item-desc { font-size: 0.9rem; color: #64748b; line-height: 1.5; }
+        .tag-pill { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; margin-inline-start: 8px; }
+        .tag-high { background: #fee2e2; color: #dc2626; border: 1px solid #fecaca; }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="content-ar" class="visible">
+            <header class="hero">
+                <h1>قائمة المهام التنفيذية 📝</h1>
+                <div class="tagline">لضمان إطلاق ناجح لمركز MTK</div>
+            </header>
+
+            <div class="checklist-group">
+                <div class="group-title">🛠️ 1. إصلاح الواجهة والموقع (UX & Web)</div>
+
+                <div class="check-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">توضيح الدورات <span class="tag-pill tag-high">حرج</span></div>
+                        <div class="item-desc">إضافة قسم "دوراتنا" في الصفحة الرئيسية مع شرح واضح لكل دورة وفوائدها.</div>
+                    </div>
+                </div>
+
+                <div class="check-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">تبسيط مسار الشراء</div>
+                        <div class="item-desc">إلغاء التعقيد الحالي وتقليل الخطوات من اختيار الدورة إلى الدفع المباشر.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-group">
+                <div class="group-title">⭐ 2. بناء الثقة (Social Proof)</div>
+
+                <div class="check-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">تقييمات Google Maps</div>
+                        <div class="item-desc">التواصل مع المتدربين السابقين لرفع عدد التقييمات من 4 إلى 50+ تقييم إيجابي.</div>
+                    </div>
+                </div>
+
+                <div class="check-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">آراء العملاء في الموقع</div>
+                        <div class="item-desc">إضافة قسم "ماذا يقول متدربونا؟" في الصفحة الرئيسية وصفحات الهبوط.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-group">
+                <div class="group-title">📱 3. السوشيال ميديا والتسويق</div>
+
+                <div class="check-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">خطة محتوى شهرية (Content Calendar)</div>
+                        <div class="item-desc">تجهيز 12 فيديو TikTok/IG و 8 منشورات LinkedIn لضمان الاستمرارية وعدم الانقطاع.</div>
+                    </div>
+                </div>
+
+                <div class="check-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">تفعيل إعلانات البحث (Google Search)</div>
+                        <div class="item-desc">استهداف الكلمات المفتاحية مثل "دورات إدارية في الرياض" لالتقاط العملاء الجاهزين.</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="content-en" class="hidden">
+            <header class="hero">
+                <h1>Execution Checklist 📝</h1>
+                <div class="tagline">To ensure a successful MTK turnaround</div>
+            </header>
+
+            <div class="checklist-group">
+                <div class="group-title">🛠️ 1. Web & UX Fixes</div>
+
+                <div class="check-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Clarify Courses <span class="tag-pill tag-high">Critical</span></div>
+                        <div class="item-desc">Add an "Our Courses" section on the homepage with clear explanations of benefits.</div>
+                    </div>
+                </div>
+
+                <div class="check-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Simplify Checkout</div>
+                        <div class="item-desc">Remove current complexity and reduce steps from selecting a course to payment.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-group">
+                <div class="group-title">⭐ 2. Building Social Proof</div>
+
+                <div class="check-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Google Maps Reviews</div>
+                        <div class="item-desc">Contact past trainees to boost reviews from 4 to 50+ positive ratings.</div>
+                    </div>
+                </div>
+
+                <div class="check-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Website Testimonials</div>
+                        <div class="item-desc">Add a "What our trainees say" section to the homepage and landing pages.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-group">
+                <div class="group-title">📱 3. Social Media & Marketing</div>
+
+                <div class="check-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Content Calendar</div>
+                        <div class="item-desc">Prepare 12 TikTok/IG videos and 8 LinkedIn posts to ensure consistency.</div>
+                    </div>
+                </div>
+
+                <div class="check-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Launch Google Search Ads</div>
+                        <div class="item-desc">Target keywords like "management courses in Riyadh" to capture high intent.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 MTK. All rights reserved.</p>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script>
+        document.querySelectorAll('.checkbox').forEach(box => {
+            box.addEventListener('click', function () {
+                this.classList.toggle('checked');
+            });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    <script src="js/vanta_bg.js"></script>
+</body>
+
+</html>

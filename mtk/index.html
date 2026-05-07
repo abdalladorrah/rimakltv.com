@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTK | Marketing Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lenci.css">
+
+    <style>
+        .quick-access-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .access-card {
+            background: white;
+            padding: 20px 15px;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-dark);
+            border: 1px solid #e5e7eb;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 140px;
+        }
+
+        .access-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary-color);
+        }
+
+        .access-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .access-title {
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .access-desc {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="content-ar" class="visible">
+            <header class="hero">
+                <h1>لوحة عمليات التسويق - مركز تعزيز الكفاءات 🚀</h1>
+                <div class="tagline">خطة الإنقاذ والتوسع - 2026</div>
+            </header>
+
+            <div class="section-title" style="margin-top: 40px; text-align: center;">الوصول السريع للملفات</div>
+            <div class="quick-access-grid">
+                <a href="Lenci.html" class="access-card">
+                    <span class="access-icon">📄</span>
+                    <span class="access-title">الاستراتيجية الشاملة</span>
+                    <span class="access-desc">الملخص التنفيذي</span>
+                </a>
+                <a href="plan.html" class="access-card">
+                    <span class="access-icon">⚔️</span>
+                    <span class="access-title">خطة العمل</span>
+                    <span class="access-desc">المراحل والمهام</span>
+                </a>
+                <a href="budget.html" class="access-card">
+                    <span class="access-icon">📊</span>
+                    <span class="access-title">الميزانية</span>
+                    <span class="access-desc">توزيع التمويل</span>
+                </a>
+                <a href="persona.html" class="access-card">
+                    <span class="access-icon">👥</span>
+                    <span class="access-title">الجمهور المستهدف</span>
+                    <span class="access-desc">مدراء HR والأفراد</span>
+                </a>
+                <a href="creatives.html" class="access-card">
+                    <span class="access-icon">🎨</span>
+                    <span class="access-title">مكتبة الإعلانات</span>
+                    <span class="access-desc">الرسائل وبناء الثقة</span>
+                </a>
+                <a href="competitors.html" class="access-card">
+                    <span class="access-icon">⚖️</span>
+                    <span class="access-title">المنافسون</span>
+                    <span class="access-desc">التحليل والمقارنة</span>
+                </a>
+            </div>
+        </div>
+
+        <div id="content-en" class="hidden">
+            <header class="hero">
+                <h1>MTK Marketing Dashboard 🚀</h1>
+                <div class="tagline">Rescue & Expansion Plan - 2026</div>
+            </header>
+
+            <div class="section-title" style="margin-top: 40px; text-align: center;">Quick Access Files</div>
+            <div class="quick-access-grid">
+                <a href="Lenci.html" class="access-card">
+                    <span class="access-icon">📄</span>
+                    <span class="access-title">Master Strategy</span>
+                    <span class="access-desc">Executive Summary</span>
+                </a>
+                <a href="plan.html" class="access-card">
+                    <span class="access-icon">⚔️</span>
+                    <span class="access-title">Action Plan</span>
+                    <span class="access-desc">Phases & Tasks</span>
+                </a>
+                <a href="budget.html" class="access-card">
+                    <span class="access-icon">📊</span>
+                    <span class="access-title">Budget</span>
+                    <span class="access-desc">Fund Allocation</span>
+                </a>
+                <a href="persona.html" class="access-card">
+                    <span class="access-icon">👥</span>
+                    <span class="access-title">Personas</span>
+                    <span class="access-desc">HR & Professionals</span>
+                </a>
+                <a href="creatives.html" class="access-card">
+                    <span class="access-icon">🎨</span>
+                    <span class="access-title">Ad Library</span>
+                    <span class="access-desc">Messaging & Trust</span>
+                </a>
+                <a href="competitors.html" class="access-card">
+                    <span class="access-icon">⚖️</span>
+                    <span class="access-title">Competitors</span>
+                    <span class="access-desc">Market Analysis</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 MTK. All rights reserved.</p>
+    </footer>
+
+    <script src="nav.js"></script>
+    <!-- Vanta.js Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    <script src="js/vanta_bg.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTK | Budget Allocation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lenci.css">
+    <style>
+        .chart-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .pie-chart {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: conic-gradient(
+                #3b82f6 0% 40%, 
+                #10b981 40% 70%, 
+                #f59e0b 70% 90%, 
+                #8b5cf6 90% 100%
+            );
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .legend {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .color-box {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+
+        .card-note {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px dashed #cbd5e1;
+            margin-top: 20px;
+            text-align: center;
+            color: #475569;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="content-ar" class="visible">
+            <header class="hero">
+                <h1>توزيع ميزانية التسويق 💰</h1>
+                <div class="tagline">كيف نستثمر لإصلاح الوضع وجلب المبيعات</div>
+            </header>
+
+            <div class="card">
+                <div class="section-title">استراتيجية التمويل (Funding Strategy)</div>
+                <p>بما أن المشكلة الأساسية هي في "التسويق وتجربة المستخدم"، الميزانية لن تذهب فقط للإعلانات، بل لتجهيز البنية التحتية لتستقبل هذه الإعلانات بنجاح.</p>
+                
+                <div class="chart-container">
+                    <div class="pie-chart"></div>
+                    <div class="legend">
+                        <div class="legend-item"><div class="color-box" style="background: #3b82f6;"></div> 40% - إعلانات LinkedIn و Google Search</div>
+                        <div class="legend-item"><div class="color-box" style="background: #10b981;"></div> 30% - تطوير صفحات الهبوط وإصلاح الـ UX</div>
+                        <div class="legend-item"><div class="color-box" style="background: #f59e0b;"></div> 20% - صناعة المحتوى والفيديو (Social Media)</div>
+                        <div class="legend-item"><div class="color-box" style="background: #8b5cf6;"></div> 10% - حملات الـ Retargeting (Meta Ads)</div>
+                    </div>
+                </div>
+
+                <div class="card-note">
+                    <strong>💡 ملاحظة هامة:</strong> إنفاق 10,000 ريال على الإعلانات الآن والموقع غير واضح سيعني خسارة المال. يجب تخصيص جزء من الميزانية <strong>أولاً</strong> لإصلاح الواجهة وبناء Social Proof.
+                </div>
+            </div>
+        </div>
+
+        <div id="content-en" class="hidden">
+            <header class="hero">
+                <h1>Marketing Budget Allocation 💰</h1>
+                <div class="tagline">How to invest to fix the core issues and drive sales</div>
+            </header>
+
+            <div class="card">
+                <div class="section-title">Funding Strategy</div>
+                <p>Since the main problem is "Marketing and UX", the budget will not only go to ads, but to preparing the infrastructure to receive these ads successfully.</p>
+                
+                <div class="chart-container">
+                    <div class="pie-chart"></div>
+                    <div class="legend">
+                        <div class="legend-item"><div class="color-box" style="background: #3b82f6;"></div> 40% - LinkedIn & Google Search Ads</div>
+                        <div class="legend-item"><div class="color-box" style="background: #10b981;"></div> 30% - Landing Pages & UX Fixes</div>
+                        <div class="legend-item"><div class="color-box" style="background: #f59e0b;"></div> 20% - Content & Video Production</div>
+                        <div class="legend-item"><div class="color-box" style="background: #8b5cf6;"></div> 10% - Retargeting (Meta Ads)</div>
+                    </div>
+                </div>
+
+                <div class="card-note">
+                    <strong>💡 Crucial Note:</strong> Spending 10,000 SAR on ads right now while the website is unclear equals burning money. A portion of the budget MUST go to UX fixes and building Social Proof first.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 MTK. All rights reserved.</p>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    <script src="js/vanta_bg.js"></script>
+</body>
+
+</html>

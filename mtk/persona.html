@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTK | Personas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lenci.css">
+    <style>
+        .persona-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .persona-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid #e5e7eb;
+            position: relative;
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            border: 3px solid var(--primary-color);
+        }
+
+        .persona-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+
+        .persona-subtitle {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .trait-list {
+            margin-bottom: 20px;
+        }
+
+        .trait-list h4 {
+            margin: 0 0 10px 0;
+            color: #475569;
+        }
+
+        .trait-list ul {
+            padding-inline-start: 20px;
+            margin: 0;
+            color: #64748b;
+        }
+
+        .quote {
+            font-style: italic;
+            padding: 15px;
+            background: #f8fafc;
+            border-right: 3px solid var(--accent-color);
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        body.lang-en .quote {
+            border-right: none;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .persona-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="content-ar" class="visible">
+            <header class="hero">
+                <h1>الجمهور المستهدف (Personas) 👥</h1>
+                <div class="tagline">من هم عملاء MTK وماذا يريدون حقاً؟</div>
+            </header>
+
+            <div class="persona-grid">
+                <!-- Persona 1 -->
+                <div class="persona-card">
+                    <div class="avatar">👔</div>
+                    <div class="persona-title">خالد (B2B)</div>
+                    <div class="persona-subtitle">مدير الموارد البشرية (HR Manager)</div>
+                    
+                    <div class="trait-list">
+                        <h4>التحديات (Pain Points):</h4>
+                        <ul>
+                            <li>معدل تسرب وظيفي عالي في الشركة.</li>
+                            <li>ضعف الكفاءة الإدارية للموظفين الجدد.</li>
+                            <li>يحتاج جهة تدريبية موثوقة (يخشى التعامل مع مراكز ليس لها تقييمات).</li>
+                        </ul>
+                    </div>
+
+                    <div class="trait-list">
+                        <h4>ماذا يبحث عنه؟ (Goals):</h4>
+                        <ul>
+                            <li>حلول تدريبية مخصصة للشركة.</li>
+                            <li>تقارير واضحة تثبت العائد على الاستثمار (ROI).</li>
+                            <li>احترافية وموثوقية عالية.</li>
+                        </ul>
+                    </div>
+
+                    <div class="quote">
+                        "أحتاج شريك تدريب أثق فيه، لا أريد أن أضيع ميزانية الشركة على دورات نظرية لا تفيد العمل."
+                    </div>
+                </div>
+
+                <!-- Persona 2 -->
+                <div class="persona-card">
+                    <div class="avatar">🎓</div>
+                    <div class="persona-title">سارة (B2C)</div>
+                    <div class="persona-subtitle">موظفة تسعى للتطور المهني</div>
+                    
+                    <div class="trait-list">
+                        <h4>التحديات (Pain Points):</h4>
+                        <ul>
+                            <li>عالقة في نفس المسمى الوظيفي منذ سنوات.</li>
+                            <li>مواقع التدريب معقدة ولا توضح ماذا ستستفيد بالضبط.</li>
+                            <li>لا تثق بالمراكز غير المعروفة وتخاف ضياع مالها.</li>
+                        </ul>
+                    </div>
+
+                    <div class="trait-list">
+                        <h4>ماذا تبحث عنه؟ (Goals):</h4>
+                        <ul>
+                            <li>شهادة معتمدة وقوية تضعها في الـ CV.</li>
+                            <li>طريقة شراء وحجز سهلة وواضحة جداً.</li>
+                            <li>رؤية تجارب وتقييمات حقيقية من متدربين سابقين (Social Proof).</li>
+                        </ul>
+                    </div>
+
+                    <div class="quote">
+                        "دخلت موقعكم ولم أفهم ما هي الدورات المتاحة وكيف أسجل.. أين آراء المتدربين السابقين؟"
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="content-en" class="hidden">
+            <header class="hero">
+                <h1>Target Personas 👥</h1>
+                <div class="tagline">Who are MTK's clients and what do they really want?</div>
+            </header>
+
+            <div class="persona-grid">
+                <!-- Persona 1 -->
+                <div class="persona-card">
+                    <div class="avatar">👔</div>
+                    <div class="persona-title">Khalid (B2B)</div>
+                    <div class="persona-subtitle">HR Manager</div>
+                    
+                    <div class="trait-list">
+                        <h4>Pain Points:</h4>
+                        <ul>
+                            <li>High employee turnover rates.</li>
+                            <li>Low managerial efficiency among staff.</li>
+                            <li>Needs a trusted training partner (fears centers with no reviews).</li>
+                        </ul>
+                    </div>
+
+                    <div class="trait-list">
+                        <h4>Goals:</h4>
+                        <ul>
+                            <li>Customized corporate training solutions.</li>
+                            <li>Clear reports proving ROI on training.</li>
+                            <li>High professionalism and reliability.</li>
+                        </ul>
+                    </div>
+
+                    <div class="quote">
+                        "I need a training partner I can trust, I don't want to waste the company's budget on theoretical courses."
+                    </div>
+                </div>
+
+                <!-- Persona 2 -->
+                <div class="persona-card">
+                    <div class="avatar">🎓</div>
+                    <div class="persona-title">Sarah (B2C)</div>
+                    <div class="persona-subtitle">Career-Driven Professional</div>
+                    
+                    <div class="trait-list">
+                        <h4>Pain Points:</h4>
+                        <ul>
+                            <li>Stuck in the same job title for years.</li>
+                            <li>Training websites are complex and don't clearly state the benefits.</li>
+                            <li>Doesn't trust unknown centers and fears wasting money.</li>
+                        </ul>
+                    </div>
+
+                    <div class="trait-list">
+                        <h4>Goals:</h4>
+                        <ul>
+                            <li>Accredited certificate to boost her CV.</li>
+                            <li>Easy and clear booking/purchasing process.</li>
+                            <li>Needs to see Social Proof (real reviews from past trainees).</li>
+                        </ul>
+                    </div>
+
+                    <div class="quote">
+                        "I visited the site but couldn't figure out the courses or how to register. Where are the reviews?"
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 MTK. All rights reserved.</p>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    <script src="js/vanta_bg.js"></script>
+</body>
+
+</html>
