@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yogi | Vision</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lenci.css">
+    <style>
+        .vision-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .vision-card {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vision-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--primary-color);
+        }
+
+        .vision-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+
+        .vision-text {
+            color: #cbd5e1;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .positioning-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .pos-tag {
+            background: rgba(212, 175, 55, 0.1);
+            color: #fbbf24;
+            padding: 8px 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 900px) {
+            .vision-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="content-ar" class="visible">
+            <header class="hero">
+                <h1>الرؤية 🌟</h1>
+                <div class="tagline">Vision & Positioning</div>
+            </header>
+
+            <div class="vision-container">
+                <div class="vision-card">
+                    <div class="vision-title">الرؤية الاستراتيجية (Strategic Vision)</div>
+                    <div class="vision-text">
+                        <ul>
+                            <li>تحويل المطعم إلى نظام مبيعات مستقر يعتمد على الاشتراكات وليس فقط الطلبات الفردية.</li>
+                            <li>بناء تجربة عميل قوية تعزز الثقة وتدفع للشراء المتكرر.</li>
+                            <li>خلق مصدر دخل ثابت وقابل للنمو من خلال الاشتراكات الشهرية والأسبوعية.</li>
+                            <li>تحقيق توازن بين زيادة عدد العملاء الجدد والحفاظ على العملاء الحاليين.</li>
+                            <li>بناء نظام قابل للتوسع يمكن الاعتماد عليه في زيادة الإيرادات بشكل مستمر.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="vision-card">
+                    <div class="vision-title">التموضع (Positioning)</div>
+                    <div class="vision-text">
+                        <ul>
+                            <li>نحن لا نعمل كـ Agency تقليدية لإدارة الإعلانات فقط.</li>
+                            <li>نعمل كشريك نمو يركز على زيادة المبيعات وليس مجرد زيادة الزيارات.</li>
+                            <li>نبني نظام متكامل يشمل:
+                                <ul>
+                                    <li>جذب العملاء المناسبين</li>
+                                    <li>تحويلهم إلى مبيعات</li>
+                                    <li>تحسين تجربتهم</li>
+                                    <li>إعادة استهدافهم وزيادة قيمة كل عميل</li>
+                                </ul>
+                            </li>
+                            <li>هدفنا هو تحقيق نتائج قابلة للقياس وليس مجرد تشغيل حملات إعلانية.</li>
+                        </ul>
+                    </div>
+                    <div class="positioning-tags">
+                        <!-- Content goes here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="content-en" class="hidden">
+            <header class="hero">
+                <h1>Vision 🌟</h1>
+                <div class="tagline">Strategic Vision & Positioning</div>
+            </header>
+
+            <div class="vision-container">
+                <div class="vision-card">
+                    <div class="vision-title">Strategic Vision</div>
+                    <div class="vision-text">
+                        <ul>
+                            <li>Transform the restaurant into a stable sales system based on subscriptions rather than just individual orders.</li>
+                            <li>Build a strong customer experience that enhances trust and drives repeat purchases.</li>
+                            <li>Create a consistent and scalable revenue stream through weekly and monthly subscriptions.</li>
+                            <li>Achieve a balance between acquiring new customers and retaining existing ones.</li>
+                            <li>Build a scalable system that can be relied upon to continuously increase revenue.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="vision-card">
+                    <div class="vision-title">Positioning</div>
+                    <div class="vision-text">
+                        <ul>
+                            <li>We do not operate as a traditional ad-management agency.</li>
+                            <li>We act as a growth partner focused on increasing sales, not just driving traffic.</li>
+                            <li>We build a comprehensive system that includes:
+                                <ul>
+                                    <li>Attracting the right customers</li>
+                                    <li>Converting them into sales</li>
+                                    <li>Improving their experience</li>
+                                    <li>Retargeting them and maximizing the value of each customer</li>
+                                </ul>
+                            </li>
+                            <li>Our goal is to achieve measurable results, not just run ad campaigns.</li>
+                        </ul>
+                    </div>
+                    <div class="positioning-tags">
+                        <!-- Content goes here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Yogi. All rights reserved.</p>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    <script src="js/vanta_bg.js"></script>
+</body>
+
+</html>

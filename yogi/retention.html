@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yogi | Customer Growth System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lenci.css">
+    <style>
+        .retention-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .ret-card {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .ret-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+
+        .ret-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .ret-title {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .ret-text {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="content-ar" class="visible">
+            <header class="hero">
+                <h1>نظام نمو العملاء 🔄</h1>
+                <div class="tagline">Customer Growth System</div>
+            </header>
+
+            <div class="retention-grid">
+                <div class="ret-card">
+                    <div class="ret-icon">📈</div>
+                    <div class="ret-title">تكرار الشراء (Repeat Purchases)</div>
+                    <div class="ret-text">
+                        <ul>
+                            <li>تشجيع العميل على إعادة الطلب بعد أول تجربة.</li>
+                            <li>تقديم تجربة ثابتة وجودة عالية.</li>
+                            <li>استخدام Follow-up بسيط لزيادة التكرار.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ret-card">
+                    <div class="ret-icon">🤝</div>
+                    <div class="ret-title">زيادة قيمة الطلب (Upsell & Bundles)</div>
+                    <div class="ret-text">
+                        <ul>
+                            <li>تقديم عروض إضافية مع الطلب (وجبات – إضافات).</li>
+                            <li>عمل Bundles لزيادة قيمة الطلب.</li>
+                            <li>اقتراح خيارات أفضل تناسب العميل.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ret-card">
+                    <div class="ret-icon">🌍</div>
+                    <div class="ret-title">نمو الاشتراكات (Subscription Growth)</div>
+                    <div class="ret-text">
+                        <ul>
+                            <li>تحويل العملاء إلى اشتراكات أسبوعية أو شهرية.</li>
+                            <li>تقديم حوافز للالتزام (خصومات – مزايا إضافية).</li>
+                            <li>متابعة العملاء المشتركين للحفاظ عليهم وتقليل الإلغاء.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="content-en" class="hidden">
+            <header class="hero">
+                <h1>Customer Growth System 🔄</h1>
+                <div class="tagline">Growth Engine</div>
+            </header>
+
+            <div class="retention-grid">
+                <div class="ret-card">
+                    <div class="ret-icon">📈</div>
+                    <div class="ret-title">Repeat Purchases</div>
+                    <div class="ret-text">
+                        <ul>
+                            <li>Encourage the customer to reorder after the first experience.</li>
+                            <li>Provide a consistent experience and high quality.</li>
+                            <li>Use simple follow-ups to increase frequency.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ret-card">
+                    <div class="ret-icon">🤝</div>
+                    <div class="ret-title">Upsell & Bundles</div>
+                    <div class="ret-text">
+                        <ul>
+                            <li>Offer additional items with the order (meals – add-ons).</li>
+                            <li>Create bundles to increase order value.</li>
+                            <li>Suggest better options that suit the customer.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ret-card">
+                    <div class="ret-icon">🌍</div>
+                    <div class="ret-title">Subscription Growth</div>
+                    <div class="ret-text">
+                        <ul>
+                            <li>Convert customers to weekly or monthly subscriptions.</li>
+                            <li>Provide incentives for commitment (discounts – extra perks).</li>
+                            <li>Follow up with subscribed customers to retain them and reduce cancellations.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Yogi. All rights reserved.</p>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    <script src="js/vanta_bg.js"></script>
+</body>
+
+</html>

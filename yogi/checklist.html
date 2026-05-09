@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yogi | Task List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lenci.css">
+    <style>
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .check-card {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-top: 4px solid var(--primary-color);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.5);
+        }
+
+        .check-title {
+            font-size: 1.2rem;
+            color: #f8fafc;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+        }
+
+        .task-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        .task-box {
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(212, 175, 55, 0.5);
+            border-radius: 4px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .task-box.done {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            position: relative;
+        }
+        
+        .task-box.done::after {
+            content: '✓';
+            color: #020617;
+            position: absolute;
+            font-size: 14px;
+            font-weight: bold;
+            top: -1px;
+            left: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="content-ar" class="visible">
+            <header class="hero">
+                <h1>قائمة المهام ✅</h1>
+                <div class="tagline">Task List</div>
+            </header>
+
+            <div class="checklist-grid">
+                
+                <div class="check-card">
+                    <div class="check-title">المهام المطلوبة (To Do)</div>
+                    <div class="task-item">
+                        <div class="task-box"></div>
+                        <div>تحسين تجربة العميل داخل المطعم</div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-box"></div>
+                        <div>تجهيز نظام الاشتراكات</div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-box"></div>
+                        <div>تطوير المنيو</div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-box"></div>
+                        <div>تجهيز نظام التقييم</div>
+                    </div>
+                </div>
+
+                <div class="check-card">
+                    <div class="check-title">قيد التنفيذ (In Progress)</div>
+                    <div class="task-item">
+                        <div class="task-box"></div>
+                        <div>تدريب الفريق على التعامل مع العملاء</div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-box"></div>
+                        <div>تحسين سرعة الرد على العملاء</div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-box"></div>
+                        <div>تجهيز العروض</div>
+                    </div>
+                </div>
+
+                <div class="check-card">
+                    <div class="check-title">منجزة (Done)</div>
+                    <div class="task-item">
+                        <div class="task-box done"></div>
+                        <div>تحليل الوضع الحالي</div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-box done"></div>
+                        <div>تحديد المشاكل</div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-box done"></div>
+                        <div>وضع الاستراتيجية</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="content-en" class="hidden">
+            <header class="hero">
+                <h1>Task List ✅</h1>
+                <div class="tagline">Execution Board</div>
+            </header>
+
+            <div class="checklist-grid">
+                
+                <div class="check-card">
+                    <div class="check-title">To Do</div>
+                    <div class="task-item">
+                        <div class="task-box"></div>
+                        <div>Improve in-restaurant customer experience</div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-box"></div>
+                        <div>Set up the subscription system</div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-box"></div>
+                        <div>Develop the menu</div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-box"></div>
+                        <div>Set up the review system</div>
+                    </div>
+                </div>
+
+                <div class="check-card">
+                    <div class="check-title">In Progress</div>
+                    <div class="task-item">
+                        <div class="task-box"></div>
+                        <div>Train the team on customer interaction</div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-box"></div>
+                        <div>Improve response time to customers</div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-box"></div>
+                        <div>Prepare offers</div>
+                    </div>
+                </div>
+
+                <div class="check-card">
+                    <div class="check-title">Done</div>
+                    <div class="task-item">
+                        <div class="task-box done"></div>
+                        <div>Analyze current situation</div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-box done"></div>
+                        <div>Identify problems</div>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-box done"></div>
+                        <div>Develop strategy</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Yogi. All rights reserved.</p>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    <script src="js/vanta_bg.js"></script>
+</body>
+
+</html>

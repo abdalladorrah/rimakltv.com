@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yogi | Action Plan</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lenci.css">
+
+    <style>
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: #e5e7eb;
+            top: 0;
+            bottom: 0;
+            right: 50%;
+            margin-right: -2px;
+            border-radius: 4px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 4px solid var(--primary-color);
+            top: 25px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            right: 0;
+        }
+
+        .right {
+            right: 50%;
+        }
+
+        .left::after {
+            left: -10px;
+            right: auto;
+        }
+
+        .right::after {
+            right: -10px;
+            left: auto;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: var(--card-bg);
+            position: relative;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            border: var(--card-border);
+        }
+
+        .timeline-date {
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .timeline-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 15px;
+        }
+
+        .task-list {
+            margin: 0;
+            padding: 0;
+        }
+
+        .task-list li {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: var(--text-muted);
+        }
+
+        body[dir="ltr"] .timeline::after {
+            left: 50%;
+            right: auto;
+            margin-left: -2px;
+        }
+
+        body[dir="ltr"] .left {
+            left: 0;
+            right: auto;
+        }
+
+        body[dir="ltr"] .right {
+            left: 50%;
+            right: auto;
+        }
+
+        body[dir="ltr"] .left::after {
+            left: auto;
+            right: -10px;
+        }
+
+        body[dir="ltr"] .right::after {
+            left: -10px;
+            right: auto;
+        }
+
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                right: 31px;
+            }
+            body[dir="ltr"] .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 0;
+                padding-right: 70px;
+            }
+            body[dir="ltr"] .timeline-item {
+                padding-right: 0;
+                padding-left: 70px;
+            }
+
+            .right {
+                right: 0;
+            }
+            body[dir="ltr"] .right {
+                left: 0;
+            }
+
+            .left::after, .right::after {
+                right: 21px;
+            }
+            body[dir="ltr"] .left::after, body[dir="ltr"] .right::after {
+                left: 21px;
+                right: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="content-ar" class="visible">
+            <header class="hero">
+                <h1>خطة العمل ⚔️</h1>
+                <div class="tagline">Action Plan</div>
+            </header>
+
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-date">Phase 1</span>
+                        <h3 class="timeline-title">المرحلة 1: الإصلاح والتأسيس</h3>
+                        <ul class="task-list">
+                            <li>تحسين تجربة العميل داخل المطعم (الخدمة – السرعة – التعامل).</li>
+                            <li>إصلاح أي مشاكل في الطلب أو التوصيل.</li>
+                            <li>تجهيز نظام تقييم Google (QR Code + تشجيع العملاء).</li>
+                            <li>تطوير المنيو وإضافة (Calories & Protein).</li>
+                            <li>تجهيز عروض الاشتراكات الأسبوعية والشهرية.</li>
+                            <li>تحديد طريقة واضحة للرد على العملاء (WhatsApp / Calls).</li>
+                            <li>تدريب الفريق على التعامل مع العملاء وعرض الاشتراك.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="timeline-date">Phase 2</span>
+                        <h3 class="timeline-title">المرحلة 2: التحقق</h3>
+                        <ul class="task-list">
+                            <li>بدء بيع الاشتراكات بدون إعلانات (من خلال العملاء الحاليين وWalk-in).</li>
+                            <li>اختبار العروض المختلفة ومعرفة الأفضل.</li>
+                            <li>متابعة ردود فعل العملاء وتحسين التجربة.</li>
+                            <li>قياس عدد المهتمين مقابل عدد المشترين.</li>
+                            <li>تحسين طريقة الرد والإقفال بناءً على النتائج.</li>
+                            <li>الوصول إلى أول مجموعة من العملاء المشتركين.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-date">Phase 3</span>
+                        <h3 class="timeline-title">المرحلة 3: التوسع</h3>
+                        <ul class="task-list">
+                            <li>بدء تشغيل الإعلانات بشكل تدريجي (Google + Snapchat + Instagram).</li>
+                            <li>التركيز على الحملات التي تحقق أفضل نتائج.</li>
+                            <li>إعادة استهداف العملاء المهتمين.</li>
+                            <li>تحسين تكلفة الحصول على العميل (CAC).</li>
+                            <li>زيادة عدد الاشتراكات بشكل مستمر.</li>
+                            <li>التوسع في الوصول إلى مناطق جديدة أو شرائح أكبر.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="content-en" class="hidden">
+            <header class="hero">
+                <h1>Action Plan ⚔️</h1>
+                <div class="tagline">Execution Roadmap</div>
+            </header>
+
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-date">Phase 1</span>
+                        <h3 class="timeline-title">Phase 1: Fix & Setup</h3>
+                        <ul class="task-list">
+                            <li>Improve customer experience inside the restaurant (Service – Speed – Interaction).</li>
+                            <li>Fix any issues in ordering or delivery.</li>
+                            <li>Set up the Google review system (QR Code + encouraging customers).</li>
+                            <li>Develop the menu to add (Calories & Protein).</li>
+                            <li>Prepare weekly and monthly subscription offers.</li>
+                            <li>Define a clear method for responding to customers (WhatsApp / Calls).</li>
+                            <li>Train the team on handling customers and pitching subscriptions.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="timeline-date">Phase 2</span>
+                        <h3 class="timeline-title">Phase 2: Validation</h3>
+                        <ul class="task-list">
+                            <li>Start selling subscriptions without ads (through current and walk-in customers).</li>
+                            <li>Test different offers to see what works best.</li>
+                            <li>Monitor customer feedback and improve the experience.</li>
+                            <li>Measure the number of interested prospects vs. actual buyers.</li>
+                            <li>Improve response and closing methods based on results.</li>
+                            <li>Reach the first group of subscribed customers.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-date">Phase 3</span>
+                        <h3 class="timeline-title">Phase 3: Scale</h3>
+                        <ul class="task-list">
+                            <li>Gradually launch ads (Google + Snapchat + Instagram).</li>
+                            <li>Focus on campaigns that deliver the best results.</li>
+                            <li>Retarget interested customers.</li>
+                            <li>Improve Customer Acquisition Cost (CAC).</li>
+                            <li>Continuously increase the number of subscriptions.</li>
+                            <li>Expand reach to new areas or larger segments.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Yogi. All rights reserved.</p>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    <script src="js/vanta_bg.js"></script>
+</body>
+
+</html>
