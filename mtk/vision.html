@@ -4,110 +4,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTK | Strategic Vision</title>
-
+    <title>Quality Experts | Vision & Market Position</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="lenci.css">
     <style>
-        .vision-statement {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            color: var(--text-main);
-            margin-bottom: 20px;
-            text-align: center;
-            font-weight: 600;
+        .vision-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
         }
 
-        .highlight-box {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-            border: 1px solid #bae6fd;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
+        .vision-card {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
         }
 
-        .hb-title {
-            color: #0369a1;
-            font-weight: bold;
-            margin-bottom: 10px;
-            display: block;
-            font-size: 1.05rem;
+        .vision-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--primary-color);
+        }
+
+        .vision-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+
+        .vision-text {
+            color: #cbd5e1;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .positioning-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .pos-tag {
+            background: rgba(212, 175, 55, 0.1);
+            color: #fbbf24;
+            padding: 8px 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 900px) {
+            .vision-container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 
 <body>
-
     <div class="container">
-
         <div id="content-ar" class="visible">
-            <header class="hero" style="padding: 20px 0;">
-                <h1>الرؤية الاستراتيجية 🎯</h1>
-                <div class="subtitle">مركز MTK للتدريب والاستشارات</div>
+            <header class="hero">
+                <h1>المرجعية الأولى للتدريب الاحترافي 🌟</h1>
+                <div class="tagline">كيف سيُنظر إلى "خبراء الجودة" في السوق السعودي؟</div>
             </header>
 
-            <div class="card">
-                <div class="section-title">الفلسفة الأساسية (Our Philosophy)</div>
-                <div class="vision-statement">
-                    "نحن لسنا مجرد مركز تدريب تقليدي.. نحن نبني <span style="color:var(--primary-color);">شراكات معرفية</span> مع الشركات لرفع كفاءة فرق العمل."
+            <div class="vision-container">
+                <div class="vision-card">
+                    <div class="vision-title">الرؤية الاستراتيجية</div>
+                    <div class="vision-text">
+                        رؤيتنا هي إعادة تموضع (Positioning) المعهد ليخرج من دائرة "المراكز العادية" ويدخل بقوة في شريحة "الخبراء المعتمدين" (Professional Training Authority). 
+                        <br><br>
+                        عندما يفكر مدير الـ HR أو المهندس في شهادات الـ ISO أو OSHA أو Six Sigma، يجب أن يكون "معهد خبراء الجودة" هو الخيار الأكثر أماناً وموثوقية في المملكة، الخيار الذي يضمن النتيجة ولا يخاطر بميزانيته وووقته.
+                    </div>
                 </div>
-                <p>مهمتنا هي معالجة الفجوة في السوق: منتجات التدريب موجودة، لكن <strong>الجودة وتجربة المستخدم</strong> مفقودة. نحن نسد هذه الفجوة.</p>
-                <div class="highlight-box" style="text-align: center; font-weight: bold;">
-                    فكرة قوية + تصميم ممتاز + تسويق ذكي = هيمنة سوقية 🚀
+
+                <div class="vision-card">
+                    <div class="vision-title">التموضع (Brand Positioning)</div>
+                    <div class="vision-text">
+                        لن ننافس على السعر الأرخص (حرب الأسعار تدمر الجودة)، بل سننافس على <strong>"القيمة المضمونة والاعتمادية"</strong>. العميل السعودي مستعد للدفع مقابل خدمة تمنحه الأمان الوظيفي وشهادة ترفع من قيمته في السوق.
+                    </div>
+                    <div class="positioning-tags">
+                        <div class="pos-tag">💎 Premium Training</div>
+                        <div class="pos-tag">🛡️ Authoritative Trust</div>
+                        <div class="pos-tag">🎯 Result-Oriented</div>
+                        <div class="pos-tag">🇸🇦 Saudi Market Focus</div>
+                    </div>
                 </div>
             </div>
-
-            <div class="card">
-                <div class="section-title">منهجية التحول (The Turnaround Engine)</div>
-                <div class="highlight-box">
-                    <span class="hb-title">الانتقال من الظل إلى الريادة</span>
-                    <p>رؤيتنا تعتمد على تصحيح مسار المشروع:</p>
-                    <ul>
-                        <li><strong>الموثوقية (Trust):</strong> تحويل التقييمات القليلة (4 تقييمات) إلى مئات التقييمات الإيجابية عبر إثبات النتائج.</li>
-                        <li><strong>التجربة (UX):</strong> تحويل الموقع المعقد إلى مسار سلس يوجه الزائر من "المعرفة" إلى "الشراء" في 3 ضغطات.</li>
-                    </ul>
-                </div>
-            </div>
-
         </div>
 
         <div id="content-en" class="hidden">
-            <header class="hero" style="padding: 20px 0;">
-                <h1>Strategic Vision 🎯</h1>
-                <div class="subtitle">MTK Training & Consulting</div>
+            <header class="hero">
+                <h1>The Ultimate Training Authority 🌟</h1>
+                <div class="tagline">How will "Quality Experts" be perceived in the Saudi market?</div>
             </header>
 
-            <div class="card">
-                <div class="section-title">Core Philosophy</div>
-                <div class="vision-statement">
-                    "We are not just a traditional training center.. We build <span style="color:var(--primary-color);">knowledge partnerships</span> with corporates to elevate their teams."
+            <div class="vision-container">
+                <div class="vision-card">
+                    <div class="vision-title">Strategic Vision</div>
+                    <div class="vision-text">
+                        Our vision is to reposition the institute from being "just another center" to a highly trusted "Professional Training Authority". 
+                        <br><br>
+                        When an HR manager or an engineer thinks of ISO, OSHA, or Six Sigma certifications, "Quality Experts Institute" must be the safest and most reliable choice in the Kingdom—a choice that guarantees results without risking time or budget.
+                    </div>
                 </div>
-                <p>Our mission is to bridge the market gap: training products exist, but <strong>quality and user experience</strong> are missing. We fill this gap.</p>
-                <div class="highlight-box" style="text-align: center; font-weight: bold;">
-                    Strong Idea + Excellent Design + Smart Marketing = Market Dominance 🚀
+
+                <div class="vision-card">
+                    <div class="vision-title">Brand Positioning</div>
+                    <div class="vision-text">
+                        We will not compete on being the cheapest (price wars destroy quality). Instead, we will compete on <strong>"Guaranteed Value & Reliability"</strong>. The Saudi client is ready to pay for a service that grants job security and a highly valued certification.
+                    </div>
+                    <div class="positioning-tags">
+                        <div class="pos-tag">💎 Premium Training</div>
+                        <div class="pos-tag">🛡️ Authoritative Trust</div>
+                        <div class="pos-tag">🎯 Result-Oriented</div>
+                        <div class="pos-tag">🇸🇦 Saudi Market Focus</div>
+                    </div>
                 </div>
             </div>
-
-            <div class="card">
-                <div class="section-title">The Turnaround Engine</div>
-                <div class="highlight-box">
-                    <span class="hb-title">From the Shadows to Leadership</span>
-                    <p>Our vision relies on correcting the project's course:</p>
-                    <ul>
-                        <li><strong>Trust:</strong> Turning the few reviews (4 reviews) into hundreds of positive testimonials by proving results.</li>
-                        <li><strong>UX:</strong> Transforming the complex website into a seamless funnel that guides the visitor from "Awareness" to "Purchase" in 3 clicks.</li>
-                    </ul>
-                </div>
-            </div>
-
         </div>
-
     </div>
 
     <footer>
-        <p>© 2026 MTK. All rights reserved.</p>
+        <p>© 2026 Quality Experts. All rights reserved.</p>
     </footer>
 
     <script src="nav.js"></script>

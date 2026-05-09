@@ -4,243 +4,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTK | Master Checklist</title>
-
+    <title>Quality Experts | Operations Board</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="lenci.css">
-
     <style>
-        .checklist-group {
-            margin-bottom: 30px;
-            background: white;
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .check-card {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-top: 4px solid var(--primary-color);
+            padding: 25px;
             border-radius: 12px;
-            padding: 20px;
-            border: 1px solid #e5e7eb;
-            position: relative;
-            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.5);
         }
 
-        .checklist-group::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 4px;
-            height: 100%;
-            background: var(--primary-color);
-        }
-
-        .group-title {
-            font-size: 1.3rem;
-            font-weight: 800;
-            color: var(--text-dark);
+        .check-title {
+            font-size: 1.2rem;
+            color: #f8fafc;
             margin-bottom: 20px;
             display: flex;
             align-items: center;
-            gap: 12px;
-            border-bottom: 2px solid #f3f4f6;
-            padding-bottom: 15px;
+            gap: 10px;
+            font-weight: 800;
         }
 
-        .check-item {
+        .task-item {
             display: flex;
             align-items: flex-start;
-            gap: 15px;
-            padding: 15px 0;
-            border-bottom: 1px solid #f3f4f6;
-            transition: background 0.1s;
+            gap: 12px;
+            margin-bottom: 12px;
+            color: #cbd5e1;
+            font-size: 0.95rem;
         }
 
-        .checkbox {
-            width: 24px;
-            height: 24px;
-            border: 2px solid #cbd5e1;
-            border-radius: 6px;
-            cursor: pointer;
+        .task-box {
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(212, 175, 55, 0.5);
+            border-radius: 4px;
             flex-shrink: 0;
             margin-top: 2px;
-            position: relative;
         }
-
-        .checkbox.checked {
+        
+        .task-box.done {
             background: var(--primary-color);
             border-color: var(--primary-color);
+            position: relative;
         }
-
-        .checkbox.checked::after {
+        
+        .task-box.done::after {
             content: '✓';
-            color: white;
+            color: #020617;
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             font-size: 14px;
             font-weight: bold;
+            top: -1px;
+            left: 3px;
         }
-
-        .item-text { flex-grow: 1; }
-        .item-title { font-weight: 700; color: var(--text-dark); font-size: 1rem; margin-bottom: 4px; }
-        .item-desc { font-size: 0.9rem; color: #64748b; line-height: 1.5; }
-        .tag-pill { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; margin-inline-start: 8px; }
-        .tag-high { background: #fee2e2; color: #dc2626; border: 1px solid #fecaca; }
     </style>
 </head>
 
 <body>
-
     <div class="container">
-
         <div id="content-ar" class="visible">
             <header class="hero">
-                <h1>قائمة المهام التنفيذية 📝</h1>
-                <div class="tagline">لضمان إطلاق ناجح لمركز MTK</div>
+                <h1>غرفة العمليات التنفيذية ✅</h1>
+                <div class="tagline">قائمة المهام لضمان التنفيذ الدقيق لنظام النمو (Execution Board)</div>
             </header>
 
-            <div class="checklist-group">
-                <div class="group-title">🛠️ 1. إصلاح الواجهة والموقع (UX & Web)</div>
-
-                <div class="check-item">
-                    <div class="checkbox"></div>
-                    <div class="item-text">
-                        <div class="item-title">توضيح الدورات <span class="tag-pill tag-high">حرج</span></div>
-                        <div class="item-desc">إضافة قسم "دوراتنا" في الصفحة الرئيسية مع شرح واضح لكل دورة وفوائدها.</div>
-                    </div>
+            <div class="checklist-grid">
+                
+                <div class="check-card">
+                    <div class="check-title">🌐 الموقع والـ Landing Pages</div>
+                    <div class="task-item"><div class="task-box"></div> إصلاح أخطاء تجربة المستخدم (UX Fixes).</div>
+                    <div class="task-item"><div class="task-box"></div> إنشاء صفحات هبوط (Landing Pages) سريعة وموجهة.</div>
+                    <div class="task-item"><div class="task-box"></div> تحسين سرعة تحميل الموقع (Load Speed).</div>
+                    <div class="task-item"><div class="task-box"></div> تبسيط نموذج التسجيل ليصبح 3 حقول فقط.</div>
                 </div>
 
-                <div class="check-item">
-                    <div class="checkbox"></div>
-                    <div class="item-text">
-                        <div class="item-title">تبسيط مسار الشراء</div>
-                        <div class="item-desc">إلغاء التعقيد الحالي وتقليل الخطوات من اختيار الدورة إلى الدفع المباشر.</div>
-                    </div>
+                <div class="check-card">
+                    <div class="check-title">📈 أنظمة التتبع (Tracking)</div>
+                    <div class="task-item"><div class="task-box"></div> تركيب وإعداد Meta Pixel.</div>
+                    <div class="task-item"><div class="task-box"></div> تفعيل Google Tag Manager.</div>
+                    <div class="task-item"><div class="task-box"></div> ربط الأحداث المخصصة (Conversions & Leads).</div>
+                    <div class="task-item"><div class="task-box"></div> إعداد لوحة تحكم Analytics لمراقبة الـ CPL.</div>
                 </div>
+
+                <div class="check-card">
+                    <div class="check-title">🎯 الإعلانات والمحتوى</div>
+                    <div class="task-item"><div class="task-box done"></div> كتابة الـ Copywriting لكافة المنصات.</div>
+                    <div class="task-item"><div class="task-box"></div> تصوير وفلترة فيديوهات الـ Reels القصيرة.</div>
+                    <div class="task-item"><div class="task-box"></div> تجهيز تصاميم إعلانات جوجل (Display & Search).</div>
+                    <div class="task-item"><div class="task-box"></div> إطلاق الحملات الاختبارية (A/B Testing).</div>
+                </div>
+
+                <div class="check-card">
+                    <div class="check-title">💬 واتساب والمبيعات (CRM)</div>
+                    <div class="task-item"><div class="task-box"></div> إعداد الردود التلقائية الذكية (Auto-replies).</div>
+                    <div class="task-item"><div class="task-box"></div> كتابة نصوص متابعة المبيعات (Follow-up Scripts).</div>
+                    <div class="task-item"><div class="task-box"></div> ربط نظام التنبيهات الفوري عند تسجيل Lead جديد.</div>
+                    <div class="task-item"><div class="task-box"></div> تدريب الفريق على الإغلاق البيعي السريع.</div>
+                </div>
+
+                <div class="check-card">
+                    <div class="check-title">🌟 بناء الثقة والـ SEO</div>
+                    <div class="task-item"><div class="task-box"></div> جمع 20+ تقييم Google Reviews 5 نجوم من متدربين.</div>
+                    <div class="task-item"><div class="task-box"></div> تصوير شهادات فيديو (Testimonials) واقعية.</div>
+                    <div class="task-item"><div class="task-box"></div> تحسين الكلمات المفتاحية لمقالات الموقع (SEO).</div>
+                    <div class="task-item"><div class="task-box"></div> توثيق صفحات المعهد على LinkedIn.</div>
+                </div>
+
             </div>
-
-            <div class="checklist-group">
-                <div class="group-title">⭐ 2. بناء الثقة (Social Proof)</div>
-
-                <div class="check-item">
-                    <div class="checkbox"></div>
-                    <div class="item-text">
-                        <div class="item-title">تقييمات Google Maps</div>
-                        <div class="item-desc">التواصل مع المتدربين السابقين لرفع عدد التقييمات من 4 إلى 50+ تقييم إيجابي.</div>
-                    </div>
-                </div>
-
-                <div class="check-item">
-                    <div class="checkbox"></div>
-                    <div class="item-text">
-                        <div class="item-title">آراء العملاء في الموقع</div>
-                        <div class="item-desc">إضافة قسم "ماذا يقول متدربونا؟" في الصفحة الرئيسية وصفحات الهبوط.</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="checklist-group">
-                <div class="group-title">📱 3. السوشيال ميديا والتسويق</div>
-
-                <div class="check-item">
-                    <div class="checkbox"></div>
-                    <div class="item-text">
-                        <div class="item-title">خطة محتوى شهرية (Content Calendar)</div>
-                        <div class="item-desc">تجهيز 12 فيديو TikTok/IG و 8 منشورات LinkedIn لضمان الاستمرارية وعدم الانقطاع.</div>
-                    </div>
-                </div>
-
-                <div class="check-item">
-                    <div class="checkbox"></div>
-                    <div class="item-text">
-                        <div class="item-title">تفعيل إعلانات البحث (Google Search)</div>
-                        <div class="item-desc">استهداف الكلمات المفتاحية مثل "دورات إدارية في الرياض" لالتقاط العملاء الجاهزين.</div>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
         <div id="content-en" class="hidden">
             <header class="hero">
-                <h1>Execution Checklist 📝</h1>
-                <div class="tagline">To ensure a successful MTK turnaround</div>
+                <h1>Execution Operations Board ✅</h1>
+                <div class="tagline">Task checklist to ensure precise execution of the growth system</div>
             </header>
 
-            <div class="checklist-group">
-                <div class="group-title">🛠️ 1. Web & UX Fixes</div>
-
-                <div class="check-item">
-                    <div class="checkbox"></div>
-                    <div class="item-text">
-                        <div class="item-title">Clarify Courses <span class="tag-pill tag-high">Critical</span></div>
-                        <div class="item-desc">Add an "Our Courses" section on the homepage with clear explanations of benefits.</div>
-                    </div>
+            <div class="checklist-grid">
+                
+                <div class="check-card">
+                    <div class="check-title">🌐 Website & Landing Pages</div>
+                    <div class="task-item"><div class="task-box"></div> Fix UX errors.</div>
+                    <div class="task-item"><div class="task-box"></div> Create fast, sales-oriented Landing Pages.</div>
+                    <div class="task-item"><div class="task-box"></div> Improve site load speed.</div>
+                    <div class="task-item"><div class="task-box"></div> Simplify registration to 3 fields only.</div>
                 </div>
 
-                <div class="check-item">
-                    <div class="checkbox"></div>
-                    <div class="item-text">
-                        <div class="item-title">Simplify Checkout</div>
-                        <div class="item-desc">Remove current complexity and reduce steps from selecting a course to payment.</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="checklist-group">
-                <div class="group-title">⭐ 2. Building Social Proof</div>
-
-                <div class="check-item">
-                    <div class="checkbox"></div>
-                    <div class="item-text">
-                        <div class="item-title">Google Maps Reviews</div>
-                        <div class="item-desc">Contact past trainees to boost reviews from 4 to 50+ positive ratings.</div>
-                    </div>
+                <div class="check-card">
+                    <div class="check-title">📈 Tracking Systems</div>
+                    <div class="task-item"><div class="task-box"></div> Install Meta Pixel.</div>
+                    <div class="task-item"><div class="task-box"></div> Setup Google Tag Manager.</div>
+                    <div class="task-item"><div class="task-box"></div> Link custom events (Conversions & Leads).</div>
+                    <div class="task-item"><div class="task-box"></div> Setup Analytics dashboard to monitor CPL.</div>
                 </div>
 
-                <div class="check-item">
-                    <div class="checkbox"></div>
-                    <div class="item-text">
-                        <div class="item-title">Website Testimonials</div>
-                        <div class="item-desc">Add a "What our trainees say" section to the homepage and landing pages.</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="checklist-group">
-                <div class="group-title">📱 3. Social Media & Marketing</div>
-
-                <div class="check-item">
-                    <div class="checkbox"></div>
-                    <div class="item-text">
-                        <div class="item-title">Content Calendar</div>
-                        <div class="item-desc">Prepare 12 TikTok/IG videos and 8 LinkedIn posts to ensure consistency.</div>
-                    </div>
+                <div class="check-card">
+                    <div class="check-title">🎯 Ads & Content</div>
+                    <div class="task-item"><div class="task-box done"></div> Write Copywriting for all platforms.</div>
+                    <div class="task-item"><div class="task-box"></div> Shoot and edit short Reels.</div>
+                    <div class="task-item"><div class="task-box"></div> Prepare Google Ads designs (Display & Search).</div>
+                    <div class="task-item"><div class="task-box"></div> Launch A/B Testing campaigns.</div>
                 </div>
 
-                <div class="check-item">
-                    <div class="checkbox"></div>
-                    <div class="item-text">
-                        <div class="item-title">Launch Google Search Ads</div>
-                        <div class="item-desc">Target keywords like "management courses in Riyadh" to capture high intent.</div>
-                    </div>
+                <div class="check-card">
+                    <div class="check-title">💬 WhatsApp & CRM</div>
+                    <div class="task-item"><div class="task-box"></div> Setup smart Auto-replies.</div>
+                    <div class="task-item"><div class="task-box"></div> Write Sales Follow-up Scripts.</div>
+                    <div class="task-item"><div class="task-box"></div> Link instant notifications for new Leads.</div>
+                    <div class="task-item"><div class="task-box"></div> Train team on fast sales closing.</div>
                 </div>
+
+                <div class="check-card">
+                    <div class="check-title">🌟 Trust & SEO</div>
+                    <div class="task-item"><div class="task-box"></div> Collect 20+ 5-star Google Reviews.</div>
+                    <div class="task-item"><div class="task-box"></div> Record real Video Testimonials.</div>
+                    <div class="task-item"><div class="task-box"></div> Optimize website articles keywords (SEO).</div>
+                    <div class="task-item"><div class="task-box"></div> Verify Institute pages on LinkedIn.</div>
+                </div>
+
             </div>
         </div>
-
     </div>
 
     <footer>
-        <p>© 2026 MTK. All rights reserved.</p>
+        <p>© 2026 Quality Experts. All rights reserved.</p>
     </footer>
 
     <script src="nav.js"></script>
-    <script>
-        document.querySelectorAll('.checkbox').forEach(box => {
-            box.addEventListener('click', function () {
-                this.classList.toggle('checked');
-            });
-        });
-    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
     <script src="js/vanta_bg.js"></script>

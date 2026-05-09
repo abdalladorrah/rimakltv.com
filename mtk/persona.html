@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTK | Personas</title>
+    <title>Quality Experts | Personas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
@@ -12,35 +12,44 @@
     <style>
         .persona-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
         }
 
         .persona-card {
-            background: white;
+            background: rgba(15, 23, 42, 0.85);
             border-radius: 15px;
             padding: 30px;
-            border: 1px solid #e5e7eb;
+            border: 1px solid rgba(212, 175, 55, 0.2);
             position: relative;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .persona-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
         }
 
         .avatar {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
-            background: #f1f5f9;
+            background: rgba(2, 6, 23, 0.9);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 20px;
-            border: 3px solid var(--primary-color);
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
         }
 
         .persona-title {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 800;
-            color: var(--text-dark);
+            color: #f8fafc;
             margin-bottom: 5px;
         }
 
@@ -48,40 +57,47 @@
             color: var(--primary-color);
             font-weight: 600;
             margin-bottom: 20px;
+            font-size: 0.95rem;
         }
 
         .trait-list {
             margin-bottom: 20px;
+            background: rgba(255,255,255,0.02);
+            padding: 15px;
+            border-radius: 8px;
+            border-right: 3px solid rgba(212, 175, 55, 0.5);
+        }
+        
+        body.lang-en .trait-list {
+            border-right: none;
+            border-left: 3px solid rgba(212, 175, 55, 0.5);
         }
 
         .trait-list h4 {
             margin: 0 0 10px 0;
-            color: #475569;
+            color: #fbbf24;
+            font-size: 1rem;
         }
 
         .trait-list ul {
             padding-inline-start: 20px;
             margin: 0;
-            color: #64748b;
+            color: #cbd5e1;
+            font-size: 0.9rem;
         }
 
-        .quote {
-            font-style: italic;
-            padding: 15px;
-            background: #f8fafc;
-            border-right: 3px solid var(--accent-color);
-            border-radius: 8px;
-            margin-top: 20px;
+        .trigger-badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            padding: 6px 12px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-top: 10px;
+            border: 1px solid rgba(16, 185, 129, 0.3);
         }
 
-        body.lang-en .quote {
-            border-right: none;
-            border-left: 3px solid var(--accent-color);
-        }
-
-        @media (max-width: 768px) {
-            .persona-grid { grid-template-columns: 1fr; }
-        }
     </style>
 </head>
 
@@ -91,142 +107,180 @@
 
         <div id="content-ar" class="visible">
             <header class="hero">
-                <h1>الجمهور المستهدف (Personas) 👥</h1>
-                <div class="tagline">من هم عملاء MTK وماذا يريدون حقاً؟</div>
+                <h1>من هو عميلنا الفعلي؟ 👥</h1>
+                <div class="tagline">ملفات شخصية حقيقية للجمهور المستهدف في السوق السعودي</div>
             </header>
 
             <div class="persona-grid">
+                
                 <!-- Persona 1 -->
                 <div class="persona-card">
-                    <div class="avatar">👔</div>
-                    <div class="persona-title">خالد (B2B)</div>
-                    <div class="persona-subtitle">مدير الموارد البشرية (HR Manager)</div>
+                    <div class="avatar">👷</div>
+                    <div class="persona-title">المهندس / الموظف الطموح</div>
+                    <div class="persona-subtitle">B2C - يبحث عن الترقية</div>
                     
                     <div class="trait-list">
                         <h4>التحديات (Pain Points):</h4>
                         <ul>
-                            <li>معدل تسرب وظيفي عالي في الشركة.</li>
-                            <li>ضعف الكفاءة الإدارية للموظفين الجدد.</li>
-                            <li>يحتاج جهة تدريبية موثوقة (يخشى التعامل مع مراكز ليس لها تقييمات).</li>
+                            <li>عالقة بنفس الراتب والمسمى الوظيفي.</li>
+                            <li>يخاف من ضياع ماله في معهد غير معتمد ولا يفيده فعلياً.</li>
                         </ul>
                     </div>
 
                     <div class="trait-list">
-                        <h4>ماذا يبحث عنه؟ (Goals):</h4>
+                        <h4>الأهداف (Goals):</h4>
                         <ul>
-                            <li>حلول تدريبية مخصصة للشركة.</li>
-                            <li>تقارير واضحة تثبت العائد على الاستثمار (ROI).</li>
-                            <li>احترافية وموثوقية عالية.</li>
+                            <li>الترقية وزيادة الراتب.</li>
+                            <li>شهادة قوية تثقل سيرته الذاتية (CV).</li>
                         </ul>
                     </div>
-
-                    <div class="quote">
-                        "أحتاج شريك تدريب أثق فيه، لا أريد أن أضيع ميزانية الشركة على دورات نظرية لا تفيد العمل."
-                    </div>
+                    
+                    <div class="trigger-badge">⚡ Trigger: شهادة معتمدة دولياً مضمونة</div>
                 </div>
 
                 <!-- Persona 2 -->
                 <div class="persona-card">
-                    <div class="avatar">🎓</div>
-                    <div class="persona-title">سارة (B2C)</div>
-                    <div class="persona-subtitle">موظفة تسعى للتطور المهني</div>
+                    <div class="avatar">👔</div>
+                    <div class="persona-title">مسؤول الموارد البشرية (HR)</div>
+                    <div class="persona-subtitle">B2B - Corporate Training</div>
                     
                     <div class="trait-list">
                         <h4>التحديات (Pain Points):</h4>
                         <ul>
-                            <li>عالقة في نفس المسمى الوظيفي منذ سنوات.</li>
-                            <li>مواقع التدريب معقدة ولا توضح ماذا ستستفيد بالضبط.</li>
-                            <li>لا تثق بالمراكز غير المعروفة وتخاف ضياع مالها.</li>
+                            <li>تطوير الفريق ليتوافق مع معايير الشركة أو الاعتمادات الحكومية.</li>
+                            <li>الخوف من التعاقد مع معهد غير احترافي يضيع وقت الموظفين.</li>
                         </ul>
                     </div>
 
                     <div class="trait-list">
-                        <h4>ماذا تبحث عنه؟ (Goals):</h4>
+                        <h4>الأهداف (Goals):</h4>
                         <ul>
-                            <li>شهادة معتمدة وقوية تضعها في الـ CV.</li>
-                            <li>طريقة شراء وحجز سهلة وواضحة جداً.</li>
-                            <li>رؤية تجارب وتقييمات حقيقية من متدربين سابقين (Social Proof).</li>
+                            <li>تقارير أداء احترافية للموظفين المتدربين.</li>
+                            <li>معهد له اسم قوي وموثوق ليرفع الحرج عنه أمام الإدارة.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="trigger-badge">⚡ Trigger: الموثوقية العالية والتقارير</div>
+                </div>
+
+                <!-- Persona 3 -->
+                <div class="persona-card">
+                    <div class="avatar">📋</div>
+                    <div class="persona-title">مدير الجودة / السلامة</div>
+                    <div class="persona-subtitle">Specialized Professionals</div>
+                    
+                    <div class="trait-list">
+                        <h4>التحديات (Pain Points):</h4>
+                        <ul>
+                            <li>يواجه تحديات تطبيق معايير (ISO, OSHA) في شركته.</li>
+                            <li>يكره المدربين "المنظرين" والهواة.</li>
                         </ul>
                     </div>
 
-                    <div class="quote">
-                        "دخلت موقعكم ولم أفهم ما هي الدورات المتاحة وكيف أسجل.. أين آراء المتدربين السابقين؟"
+                    <div class="trait-list">
+                        <h4>الأهداف (Goals):</h4>
+                        <ul>
+                            <li>حلول عملية وتدريب حقيقي يطبق في بيئة العمل.</li>
+                            <li>اعتمادات صارمة لا تقبل الشك.</li>
+                        </ul>
                     </div>
+                    
+                    <div class="trigger-badge">⚡ Trigger: مدربين خبراء حقيقيين في الميدان</div>
                 </div>
+
             </div>
         </div>
 
         <div id="content-en" class="hidden">
             <header class="hero">
-                <h1>Target Personas 👥</h1>
-                <div class="tagline">Who are MTK's clients and what do they really want?</div>
+                <h1>Who is our actual client? 👥</h1>
+                <div class="tagline">Real target personas for the Saudi market</div>
             </header>
 
             <div class="persona-grid">
+                
                 <!-- Persona 1 -->
                 <div class="persona-card">
-                    <div class="avatar">👔</div>
-                    <div class="persona-title">Khalid (B2B)</div>
-                    <div class="persona-subtitle">HR Manager</div>
+                    <div class="avatar">👷</div>
+                    <div class="persona-title">Ambitious Engineer/Employee</div>
+                    <div class="persona-subtitle">B2C - Seeking Promotion</div>
                     
                     <div class="trait-list">
                         <h4>Pain Points:</h4>
                         <ul>
-                            <li>High employee turnover rates.</li>
-                            <li>Low managerial efficiency among staff.</li>
-                            <li>Needs a trusted training partner (fears centers with no reviews).</li>
+                            <li>Stuck with the same salary and job title.</li>
+                            <li>Fears losing money on an unaccredited or useless institute.</li>
                         </ul>
                     </div>
 
                     <div class="trait-list">
                         <h4>Goals:</h4>
                         <ul>
-                            <li>Customized corporate training solutions.</li>
-                            <li>Clear reports proving ROI on training.</li>
-                            <li>High professionalism and reliability.</li>
+                            <li>Promotion and salary increase.</li>
+                            <li>A strong certificate to boost their CV.</li>
                         </ul>
                     </div>
-
-                    <div class="quote">
-                        "I need a training partner I can trust, I don't want to waste the company's budget on theoretical courses."
-                    </div>
+                    
+                    <div class="trigger-badge">⚡ Trigger: Guaranteed Internationally Accredited Cert</div>
                 </div>
 
                 <!-- Persona 2 -->
                 <div class="persona-card">
-                    <div class="avatar">🎓</div>
-                    <div class="persona-title">Sarah (B2C)</div>
-                    <div class="persona-subtitle">Career-Driven Professional</div>
+                    <div class="avatar">👔</div>
+                    <div class="persona-title">HR Manager</div>
+                    <div class="persona-subtitle">B2B - Corporate Training</div>
                     
                     <div class="trait-list">
                         <h4>Pain Points:</h4>
                         <ul>
-                            <li>Stuck in the same job title for years.</li>
-                            <li>Training websites are complex and don't clearly state the benefits.</li>
-                            <li>Doesn't trust unknown centers and fears wasting money.</li>
+                            <li>Developing the team to meet company or government standards.</li>
+                            <li>Fears contracting with an unprofessional institute that wastes employees' time.</li>
                         </ul>
                     </div>
 
                     <div class="trait-list">
                         <h4>Goals:</h4>
                         <ul>
-                            <li>Accredited certificate to boost her CV.</li>
-                            <li>Easy and clear booking/purchasing process.</li>
-                            <li>Needs to see Social Proof (real reviews from past trainees).</li>
+                            <li>Professional performance reports for trained employees.</li>
+                            <li>An institute with a strong, trusted name to look good in front of management.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="trigger-badge">⚡ Trigger: High Reliability & Reports</div>
+                </div>
+
+                <!-- Persona 3 -->
+                <div class="persona-card">
+                    <div class="avatar">📋</div>
+                    <div class="persona-title">Quality / Safety Manager</div>
+                    <div class="persona-subtitle">Specialized Professionals</div>
+                    
+                    <div class="trait-list">
+                        <h4>Pain Points:</h4>
+                        <ul>
+                            <li>Facing challenges in applying (ISO, OSHA) standards in their company.</li>
+                            <li>Hates "theoretical" and amateur trainers.</li>
                         </ul>
                     </div>
 
-                    <div class="quote">
-                        "I visited the site but couldn't figure out the courses or how to register. Where are the reviews?"
+                    <div class="trait-list">
+                        <h4>Goals:</h4>
+                        <ul>
+                            <li>Practical solutions and real training applicable in the workplace.</li>
+                            <li>Strict, unquestionable accreditations.</li>
+                        </ul>
                     </div>
+                    
+                    <div class="trigger-badge">⚡ Trigger: Real Expert Trainers in the Field</div>
                 </div>
+
             </div>
         </div>
 
     </div>
 
     <footer>
-        <p>© 2026 MTK. All rights reserved.</p>
+        <p>© 2026 Quality Experts. All rights reserved.</p>
     </footer>
 
     <script src="nav.js"></script>

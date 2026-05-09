@@ -142,7 +142,7 @@ function renderNavigation(lang = 'ar') {
     const navHTML = `
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">MTK<span class="dot">.</span></a>
+            <a href="index.html" class="nav-logo">QEINST<span class="dot">.</span></a>
             
             <div class="nav-links">
                 ${linksHTML}

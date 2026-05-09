@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTK | Budget Allocation</title>
+    <title>Quality Experts | Budget & Forecast</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
@@ -24,12 +24,12 @@
             height: 250px;
             border-radius: 50%;
             background: conic-gradient(
-                #3b82f6 0% 40%, 
-                #10b981 40% 70%, 
-                #f59e0b 70% 90%, 
-                #8b5cf6 90% 100%
+                #1877f2 0% 42%, 
+                #ea4335 42% 79%, 
+                #fffc00 79% 100%
             );
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            border: 4px solid rgba(15, 23, 42, 0.8);
         }
 
         .legend {
@@ -52,15 +52,106 @@
             border-radius: 4px;
         }
 
-        .card-note {
-            background: #f8fafc;
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px dashed #cbd5e1;
-            margin-top: 20px;
-            text-align: center;
-            color: #475569;
+        .forecast-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
         }
+
+        .forecast-card {
+            background: rgba(15, 23, 42, 0.95);
+            padding: 30px 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .forecast-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(212, 175, 55, 0.8);
+        }
+
+        .forecast-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary-color);
+        }
+
+        .forecast-month {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #cbd5e1;
+            margin-bottom: 15px;
+        }
+
+        .forecast-value {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            margin: 10px 0;
+            text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .forecast-details {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            line-height: 1.8;
+            text-align: right;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        body.lang-en .forecast-details { text-align: left; }
+
+        .total-box {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(15, 23, 42, 0.9) 100%);
+            border: 1px solid var(--primary-color);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .total-box h3 {
+            color: #fbbf24;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stat-num {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .stat-label {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            margin-top: 5px;
+        }
+
     </style>
 </head>
 
@@ -70,52 +161,180 @@
 
         <div id="content-ar" class="visible">
             <header class="hero">
-                <h1>توزيع ميزانية التسويق 💰</h1>
-                <div class="tagline">كيف نستثمر لإصلاح الوضع وجلب المبيعات</div>
+                <h1>الميزانية وتوقعات أول 90 يوماً 💰</h1>
+                <div class="tagline">تحليل الأداء المتوقع بناءً على إحصائيات جوجل والسوق السعودي</div>
             </header>
 
             <div class="card">
-                <div class="section-title">استراتيجية التمويل (Funding Strategy)</div>
-                <p>بما أن المشكلة الأساسية هي في "التسويق وتجربة المستخدم"، الميزانية لن تذهب فقط للإعلانات، بل لتجهيز البنية التحتية لتستقبل هذه الإعلانات بنجاح.</p>
+                <div class="section-title">استثمار 12,000 ريال شهرياً</div>
+                <p>توزيع الميزانية الإعلانية يهدف للجمع بين القنوات سريعة التحويل (Google Search) وقنوات بناء البراند والـ Leads الرخيصة (Meta & Snapchat).</p>
                 
                 <div class="chart-container">
                     <div class="pie-chart"></div>
                     <div class="legend">
-                        <div class="legend-item"><div class="color-box" style="background: #3b82f6;"></div> 40% - إعلانات LinkedIn و Google Search</div>
-                        <div class="legend-item"><div class="color-box" style="background: #10b981;"></div> 30% - تطوير صفحات الهبوط وإصلاح الـ UX</div>
-                        <div class="legend-item"><div class="color-box" style="background: #f59e0b;"></div> 20% - صناعة المحتوى والفيديو (Social Media)</div>
-                        <div class="legend-item"><div class="color-box" style="background: #8b5cf6;"></div> 10% - حملات الـ Retargeting (Meta Ads)</div>
+                        <div class="legend-item"><div class="color-box" style="background: #1877f2;"></div> 42% - Meta Ads (5,000 ريال) - للـ Leads والـ Reels</div>
+                        <div class="legend-item"><div class="color-box" style="background: #ea4335;"></div> 37% - Google Ads (4,500 ريال) - للعملاء الجاهزين للشراء</div>
+                        <div class="legend-item"><div class="color-box" style="background: #fffc00;"></div> 21% - Snapchat Ads (2,500 ريال) - للوصول السريع</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="section-title">التوقعات الواقعية لأول 90 يوماً (الربع الأول) 📈</div>
+                <p>بناءً على إحصائيات قطاع التدريب والتعليم في السعودية (متوسط تكلفة العميل المحتمل CPL على جوجل من 35-120 ريال، وعلى ميتا من 18-55 ريال):</p>
+                
+                <div class="forecast-grid">
+                    <!-- Month 1 -->
+                    <div class="forecast-card">
+                        <div class="forecast-month">الشهر الأول (تأسيس واختبار)</div>
+                        <div class="forecast-value">150 - 400</div>
+                        <div style="color: white; font-weight: bold; margin-bottom: 15px;">Lead متوقع</div>
+                        <div class="forecast-details">
+                            • تكلفة الـ Lead (CPL) ستكون في أعلى مستوياتها.<br>
+                            • الهدف: جمع البيانات (Data Collection) واختبار جودة الحملات.<br>
+                            • العملاء المتوقع إغلاقهم (بدون تحسينات): 2 إلى 6.<br>
+                            • <strong style="color: #10b981;">العملاء بعد تطوير الرد والمبيعات: 8 إلى 18.</strong>
+                        </div>
+                    </div>
+
+                    <!-- Month 2 -->
+                    <div class="forecast-card">
+                        <div class="forecast-month">الشهر الثاني (تحسين وإعادة استهداف)</div>
+                        <div class="forecast-value">300 - 500</div>
+                        <div style="color: white; font-weight: bold; margin-bottom: 15px;">Lead متوقع</div>
+                        <div class="forecast-details">
+                            • انخفاض الـ CPL بنسبة 15-20% بعد خوارزميات التحسين.<br>
+                            • تشغيل حملات الـ Retargeting للعملاء الذين تفاعلوا ولم يشتروا.<br>
+                            • زيادة الثقة بفضل التقييمات وقصص النجاح المضافة حديثاً.<br>
+                            • <strong style="color: #10b981;">العملاء الفعليين المتوقعين: 15 إلى 30 عميل.</strong>
+                        </div>
+                    </div>
+
+                    <!-- Month 3 -->
+                    <div class="forecast-card">
+                        <div class="forecast-month">الشهر الثالث (الاستقرار والتوسع)</div>
+                        <div class="forecast-value">400 - 700</div>
+                        <div style="color: white; font-weight: bold; margin-bottom: 15px;">Lead متوقع</div>
+                        <div class="forecast-details">
+                            • استقرار الخوارزميات (Google و Meta) على أفضل جمهور.<br>
+                            • تكلفة الـ CPL تصل للحد الأدنى وتصبح مستقرة جداً.<br>
+                            • بناء الـ Brand يبدأ في إعطاء نتائج (Organic Traffic).<br>
+                            • <strong style="color: #10b981;">العملاء الفعليين المتوقعين: 25 إلى 45 عميل.</strong>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card-note">
-                    <strong>💡 ملاحظة هامة:</strong> إنفاق 10,000 ريال على الإعلانات الآن والموقع غير واضح سيعني خسارة المال. يجب تخصيص جزء من الميزانية <strong>أولاً</strong> لإصلاح الواجهة وبناء Social Proof.
+                <div class="total-box">
+                    <h3>حصيلة الـ 90 يوماً الأولى 🏆</h3>
+                    <p style="margin-bottom: 30px; color: #94a3b8;">إجمالي الإنفاق الإعلاني: 36,000 ريال (12,000 شهرياً)</p>
+                    
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <div class="stat-num">850 - 1,600</div>
+                            <div class="stat-label">إجمالي الـ Leads المستقطبة</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num" style="color: #10b981;">48 - 93</div>
+                            <div class="stat-label">إجمالي العملاء الفعليين المكتسبين</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num" style="color: #fbbf24;">96K - 186K</div>
+                            <div class="stat-label">العائد المتوقع (بمتوسط 2000 ريال للدورة)</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 30px; font-size: 0.85rem; color: #64748b;">
+                        *هذه الأرقام تعتمد بشكل كبير على احترافية فريق المبيعات الداخلي، وسرعة الرد على العملاء المحتملين عبر الواتساب والمكالمات.
+                    </div>
                 </div>
             </div>
         </div>
 
         <div id="content-en" class="hidden">
             <header class="hero">
-                <h1>Marketing Budget Allocation 💰</h1>
-                <div class="tagline">How to invest to fix the core issues and drive sales</div>
+                <h1>Budget & 90-Day Forecast 💰</h1>
+                <div class="tagline">Performance analysis based on Google stats and Saudi market data</div>
             </header>
 
             <div class="card">
-                <div class="section-title">Funding Strategy</div>
-                <p>Since the main problem is "Marketing and UX", the budget will not only go to ads, but to preparing the infrastructure to receive these ads successfully.</p>
+                <div class="section-title">Investment: 12,000 SAR Monthly</div>
+                <p>The ad budget combines fast-converting channels (Google Search) with brand building and low CPL channels (Meta & Snapchat).</p>
                 
                 <div class="chart-container">
                     <div class="pie-chart"></div>
                     <div class="legend">
-                        <div class="legend-item"><div class="color-box" style="background: #3b82f6;"></div> 40% - LinkedIn & Google Search Ads</div>
-                        <div class="legend-item"><div class="color-box" style="background: #10b981;"></div> 30% - Landing Pages & UX Fixes</div>
-                        <div class="legend-item"><div class="color-box" style="background: #f59e0b;"></div> 20% - Content & Video Production</div>
-                        <div class="legend-item"><div class="color-box" style="background: #8b5cf6;"></div> 10% - Retargeting (Meta Ads)</div>
+                        <div class="legend-item"><div class="color-box" style="background: #1877f2;"></div> 42% - Meta Ads (5,000 SAR)</div>
+                        <div class="legend-item"><div class="color-box" style="background: #ea4335;"></div> 37% - Google Ads (4,500 SAR)</div>
+                        <div class="legend-item"><div class="color-box" style="background: #fffc00;"></div> 21% - Snapchat Ads (2,500 SAR)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="section-title">Realistic 90-Day Forecast 📈</div>
+                <p>Based on Saudi education sector stats (Avg CPL on Google 35-120 SAR, Meta 18-55 SAR):</p>
+                
+                <div class="forecast-grid">
+                    <!-- Month 1 -->
+                    <div class="forecast-card">
+                        <div class="forecast-month">Month 1 (Setup)</div>
+                        <div class="forecast-value">150 - 400</div>
+                        <div style="color: white; font-weight: bold; margin-bottom: 15px;">Expected Leads</div>
+                        <div class="forecast-details">
+                            • CPL will be at its highest.<br>
+                            • Goal: Data Collection and campaign testing.<br>
+                            • Clients expected (without system fixes): 2 to 6.<br>
+                            • <strong style="color: #10b981;">Clients with proper sales follow-up: 8 to 18.</strong>
+                        </div>
+                    </div>
+
+                    <!-- Month 2 -->
+                    <div class="forecast-card">
+                        <div class="forecast-month">Month 2 (Optimization)</div>
+                        <div class="forecast-value">300 - 500</div>
+                        <div style="color: white; font-weight: bold; margin-bottom: 15px;">Expected Leads</div>
+                        <div class="forecast-details">
+                            • CPL drops 15-20% due to algorithms.<br>
+                            • Launching Retargeting campaigns.<br>
+                            • Trust increases with new reviews.<br>
+                            • <strong style="color: #10b981;">Expected actual clients: 15 to 30.</strong>
+                        </div>
+                    </div>
+
+                    <!-- Month 3 -->
+                    <div class="forecast-card">
+                        <div class="forecast-month">Month 3 (Scaling)</div>
+                        <div class="forecast-value">400 - 700</div>
+                        <div style="color: white; font-weight: bold; margin-bottom: 15px;">Expected Leads</div>
+                        <div class="forecast-details">
+                            • Ad algorithms stabilize on the best audience.<br>
+                            • CPL reaches its lowest and stabilizes.<br>
+                            • Organic Brand traffic starts converting.<br>
+                            • <strong style="color: #10b981;">Expected actual clients: 25 to 45.</strong>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card-note">
-                    <strong>💡 Crucial Note:</strong> Spending 10,000 SAR on ads right now while the website is unclear equals burning money. A portion of the budget MUST go to UX fixes and building Social Proof first.
+                <div class="total-box">
+                    <h3>90-Day Accumulation 🏆</h3>
+                    <p style="margin-bottom: 30px; color: #94a3b8;">Total Ad Spend: 36,000 SAR (12,000 Monthly)</p>
+                    
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <div class="stat-num">850 - 1,600</div>
+                            <div class="stat-label">Total Leads Generated</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num" style="color: #10b981;">48 - 93</div>
+                            <div class="stat-label">Total Actual Clients</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num" style="color: #fbbf24;">96K - 186K</div>
+                            <div class="stat-label">Expected Revenue (Avg 2000 SAR/Course)</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 30px; font-size: 0.85rem; color: #64748b;">
+                        *These numbers heavily depend on the internal sales team's speed of response and closing skills.
+                    </div>
                 </div>
             </div>
         </div>
@@ -123,7 +342,7 @@
     </div>
 
     <footer>
-        <p>© 2026 MTK. All rights reserved.</p>
+        <p>© 2026 Quality Experts. All rights reserved.</p>
     </footer>
 
     <script src="nav.js"></script>

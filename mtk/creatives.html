@@ -4,159 +4,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTK | Creatives Gallery</title>
+    <title>Quality Experts | Ad Creatives</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="lenci.css">
     <style>
-        .creative-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            margin-bottom: 30px;
-            border: 1px solid #e5e7eb;
+        .creative-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
         }
 
-        .mockup-container {
-            height: 250px;
-            background: #f8fafc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .angle-card {
+            background: rgba(15, 23, 42, 0.85);
+            border-left: 4px solid var(--primary-color);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        body.lang-en .angle-card {
+            border-left: 4px solid var(--primary-color);
+            border-right: none;
+        }
+        
+        body[dir="rtl"] .angle-card {
+            border-right: 4px solid var(--primary-color);
+            border-left: none;
+        }
+
+        .angle-title {
+            font-size: 1.3rem;
+            color: #fbbf24;
+            margin-bottom: 15px;
             font-weight: bold;
-            color: #1e40af;
-            border-bottom: 1px solid #e5e7eb;
-            font-size: 1.1rem;
-            text-align: center;
-            padding: 20px;
         }
 
-        .creative-details { padding: 25px; }
-
-        .tag {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .tag-b2b { background: #eff6ff; color: #1d4ed8; }
-        .tag-b2c { background: #fef2f2; color: #b91c1c; }
-
-        .script-box {
-            background: #f1f5f9;
+        .hook-text {
+            background: rgba(255,255,255,0.05);
             padding: 15px;
             border-radius: 8px;
-            margin-top: 15px;
-            border-right: 4px solid var(--primary-color);
+            color: #cbd5e1;
+            font-style: italic;
+            margin-bottom: 15px;
+            border: 1px dashed rgba(212, 175, 55, 0.4);
         }
 
-        body.lang-en .script-box {
-            border-right: none;
-            border-left: 4px solid var(--primary-color);
+        .platform-rules {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .plat-card {
+            background: rgba(2, 6, 23, 0.8);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .plat-card h3 {
+            color: #f8fafc;
+            margin-top: 0;
+        }
+
+        .plat-card p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            margin: 0;
         }
     </style>
 </head>
 
 <body>
-
     <div class="container">
-
         <div id="content-ar" class="visible">
             <header class="hero">
-                <h1>مكتبة الإعلانات 🎨</h1>
-                <div class="tagline">الزوايا الإعلانية الموجهة لحل أزمة الثقة وبناء الجمهور</div>
+                <h1>زوايا البيع وصناعة المحتوى 🎨</h1>
+                <div class="tagline">رسائل تسويقية تضرب على الوتر الحساس للعميل السعودي</div>
             </header>
 
-            <div class="card">
-                <div class="section-title">فلسفة المحتوى الجديد</div>
-                <p>لن ننشر إعلانات "سجل الآن في دورتنا" المباشرة والمملة. سنسوق من خلال "إثبات القيمة" و"النتائج الملموسة" لكسب الثقة المفقودة.</p>
+            <div class="creative-grid">
+                <div class="angle-card">
+                    <div class="angle-title">💼 زاوية الترقية والراتب (Career Growth)</div>
+                    <div class="hook-text">"شهادة الأوشا ليست مجرد ورقة، هي تذكرتك لمنصب مدير السلامة. سجل الآن."</div>
+                    <p style="color: #94a3b8; font-size: 0.95rem; margin:0;">استهداف الأفراد الطموحين الباحثين عن زيادة الدخل عبر تعزيز الـ CV بشهادات لا يمتلكها منافسوهم في العمل.</p>
+                </div>
+
+                <div class="angle-card">
+                    <div class="angle-title">🏢 زاوية الموثوقية والشركات (Corporate Trust)</div>
+                    <div class="hook-text">"درب فريقك مع خبراء الجودة المعتمدين، ارفع كفاءة شركتك واستعد لمعايير الآيزو."</div>
+                    <p style="color: #94a3b8; font-size: 0.95rem; margin:0;">استهداف مدراء الموارد البشرية والشركات التي تبحث عن جهة موثوقة تضمن جودة التدريب واعتماده.</p>
+                </div>
+
+                <div class="angle-card">
+                    <div class="angle-title">⏳ زاوية الخوف من الضياع (FOMO)</div>
+                    <div class="hook-text">"السوق يتطور، هل ستظل بنفس المسمى الوظيفي؟ اعتمد نفسك الآن بشهادة Six Sigma."</div>
+                    <p style="color: #94a3b8; font-size: 0.95rem; margin:0;">اللعب على وتر التنافسية في سوق العمل السعودي ورؤية 2030 التي تتطلب كفاءات عالية التأهيل.</p>
+                </div>
             </div>
 
-            <!-- Ad 1 -->
-            <div class="creative-card">
-                <div class="mockup-container">
-                    [فيديو: متدرب سابق يتحدث عن كيف ساعدته الدورة في الحصول على ترقية 📈]
+            <div class="platform-rules">
+                <div class="plat-card">
+                    <h3>📱 Instagram & Snapchat</h3>
+                    <p>فيديوهات ديناميكية سريعة (Reels). التركيز المطلق على المحاضرين وجودة الشرح مع دعوة مباشرة (CTA) للواتساب.</p>
                 </div>
-                <div class="creative-details">
-                    <span class="tag tag-b2c">B2C - Instagram/TikTok</span>
-                    <h3>زاوية "الدليل القاطع" (Social Proof)</h3>
-                    <div class="script-box">
-                        <p><strong>الخطاف:</strong> "كل المراكز تقول أنها الأفضل.. لكن ماذا يقول المتدربون؟"</p>
-                        <p><strong>المحتوى:</strong> شهادة حية (UGC) من متدرب يعرض شهادته وكيف أثرت على مساره المهني.</p>
-                        <p><strong>الهدف:</strong> بناء الثقة (Trust) وتجاوز نقطة ضعف "قلة التقييمات".</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Ad 2 -->
-            <div class="creative-card">
-                <div class="mockup-container">
-                    [تصميم: إنفوجرافيك يوضح فرق أداء الموظف قبل وبعد تدريب MTK 📊]
-                </div>
-                <div class="creative-details">
-                    <span class="tag tag-b2b">B2B - LinkedIn</span>
-                    <h3>زاوية "لغة الأرقام" (HR ROI)</h3>
-                    <div class="script-box">
-                        <p><strong>الخطاف:</strong> "كم تخسر شركتك سنوياً بسبب الإدارة الضعيفة؟"</p>
-                        <p><strong>المحتوى:</strong> عرض إحصائيات كيف أن الاستثمار في تدريب الموظفين يقلل التسرب الوظيفي بنسبة 40%.</p>
-                        <p><strong>الهدف:</strong> إقناع صناع القرار (HR) أن MTK هو استثمار يوفر المال وليس مجرد تكلفة.</p>
-                    </div>
+                <div class="plat-card">
+                    <h3>🔍 Google Ads</h3>
+                    <p>نصوص مباشرة (Direct Response). نركز على الكلمات البحثية المباشرة (دورة أوشا معتمدة، شهادة آيزو) ونبرز السعر والاعتماد فوراً.</p>
                 </div>
             </div>
         </div>
 
         <div id="content-en" class="hidden">
             <header class="hero">
-                <h1>Ad Library 🎨</h1>
-                <div class="tagline">Creative angles designed to build trust and audience</div>
+                <h1>Ad Creatives & Angles 🎨</h1>
+                <div class="tagline">Marketing messages that hit the exact pain points of the Saudi client</div>
             </header>
 
-            <div class="card">
-                <div class="section-title">The New Content Philosophy</div>
-                <p>We won't run boring "Register Now" direct ads. We will market through "Proving Value" and "Tangible Results" to win back the missing trust.</p>
+            <div class="creative-grid">
+                <div class="angle-card">
+                    <div class="angle-title">💼 Career Growth Angle</div>
+                    <div class="hook-text">"The OSHA certificate is not just a paper, it's your ticket to the Safety Manager position. Register now."</div>
+                    <p style="color: #94a3b8; font-size: 0.95rem; margin:0;">Targeting ambitious individuals looking to increase their income by boosting their CV with unique certifications.</p>
+                </div>
+
+                <div class="angle-card">
+                    <div class="angle-title">🏢 Corporate Trust Angle</div>
+                    <div class="hook-text">"Train your team with certified Quality Experts, raise your company's efficiency, and prepare for ISO standards."</div>
+                    <p style="color: #94a3b8; font-size: 0.95rem; margin:0;">Targeting HR managers and corporates seeking a reliable institute that guarantees training quality and accreditation.</p>
+                </div>
+
+                <div class="angle-card">
+                    <div class="angle-title">⏳ FOMO Angle</div>
+                    <div class="hook-text">"The market is evolving, will you stay in the same job title? Get certified now with Six Sigma."</div>
+                    <p style="color: #94a3b8; font-size: 0.95rem; margin:0;">Playing on the competitiveness of the Saudi job market and Vision 2030 which requires highly qualified talents.</p>
+                </div>
             </div>
 
-            <!-- Ad 1 -->
-            <div class="creative-card">
-                <div class="mockup-container">
-                    [Video: Past trainee explaining how the course got them a promotion 📈]
+            <div class="platform-rules">
+                <div class="plat-card">
+                    <h3>📱 Instagram & Snapchat</h3>
+                    <p>Fast, dynamic videos (Reels). Absolute focus on the instructors and explanation quality with a direct CTA to WhatsApp.</p>
                 </div>
-                <div class="creative-details">
-                    <span class="tag tag-b2c">B2C - Instagram/TikTok</span>
-                    <h3>The "Social Proof" Angle</h3>
-                    <div class="script-box">
-                        <p><strong>Hook:</strong> "Every center says they are the best.. but what do the trainees say?"</p>
-                        <p><strong>Content:</strong> Live UGC testimonial showing their certificate and career impact.</p>
-                        <p><strong>Goal:</strong> Build Trust and overcome the "lack of reviews" weakness.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Ad 2 -->
-            <div class="creative-card">
-                <div class="mockup-container">
-                    [Design: Infographic showing employee performance Before vs After MTK 📊]
-                </div>
-                <div class="creative-details">
-                    <span class="tag tag-b2b">B2B - LinkedIn</span>
-                    <h3>The "ROI" Angle</h3>
-                    <div class="script-box">
-                        <p><strong>Hook:</strong> "How much does your company lose yearly due to poor management?"</p>
-                        <p><strong>Content:</strong> Stats showing how training investments reduce turnover by 40%.</p>
-                        <p><strong>Goal:</strong> Convince HR decision-makers that MTK is an investment that saves money, not just a cost.</p>
-                    </div>
+                <div class="plat-card">
+                    <h3>🔍 Google Ads</h3>
+                    <p>Direct Response texts. Focus on direct search keywords (accredited OSHA course, ISO certificate) highlighting price and accreditation instantly.</p>
                 </div>
             </div>
         </div>
-
     </div>
 
     <footer>
-        <p>© 2026 MTK. All rights reserved.</p>
+        <p>© 2026 Quality Experts. All rights reserved.</p>
     </footer>
 
     <script src="nav.js"></script>

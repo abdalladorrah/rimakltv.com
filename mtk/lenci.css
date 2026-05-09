@@ -3,19 +3,19 @@
     /* Luxurious Gold */
     --primary-dark: #b5952f;
     /* Deep Gold */
-    --secondary-color: #0f172a;
-    /* Rich Slate */
+    --secondary-color: #0b0f19;
+    /* Deep Midnight Blue/Black */
     --accent-color: #fbbf24;
-    /* Amber/Gold Accent */
-    --text-main: #111827;
-    /* Almost Black */
-    --text-muted: #4b5563;
-    /* Gray */
-    --text-light: #9ca3af;
+    /* Bright Gold Accent */
+    --text-main: #f8fafc;
+    /* Off-white text */
+    --text-muted: #94a3b8;
+    /* Slate gray for secondary text */
+    --text-light: #cbd5e1;
     /* Light Gray */
-    --bg-gradient: #020617;
-    --card-bg: rgba(255, 255, 255, 0.95);
-    --card-border: 1px solid rgba(255, 255, 255, 0.2);
+    --bg-gradient: linear-gradient(135deg, #020617 0%, #0b0f19 100%);
+    --card-bg: rgba(15, 23, 42, 0.7);
+    --card-border: 1px solid rgba(212, 175, 55, 0.15);
     --nav-bg: rgba(2, 6, 23, 0.85);
     /* Glassy Dark Header */
 
@@ -182,7 +182,7 @@ body.lang-en {
 }
 
 /* Mobile Adjustments for Dropdowns */
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
     .dropdown {
         flex-direction: column;
         width: 100%;

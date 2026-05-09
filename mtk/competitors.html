@@ -4,50 +4,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTK | Competitors Analysis</title>
+    <title>Quality Experts | Competitors Analysis</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="lenci.css">
     <style>
-        .comp-table {
-            width: 100%;
-            border-collapse: collapse;
+        .competitor-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
             margin-top: 20px;
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
 
-        .comp-table th, .comp-table td {
-            padding: 15px;
-            text-align: right;
-            border-bottom: 1px solid #e5e7eb;
+        .comp-card {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+            position: relative;
         }
 
-        body.lang-en .comp-table th, 
-        body.lang-en .comp-table td {
-            text-align: left;
+        .comp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
         }
 
-        .comp-table th {
-            background: #f8fafc;
+        .comp-title {
+            font-size: 1.8rem;
             font-weight: 800;
-            color: #1e293b;
+            color: var(--primary-color);
+            margin: 0;
         }
 
-        .comp-table tr:last-child td { border-bottom: none; }
+        .comp-meta {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
 
-        .mtk-row {
-            background: #eff6ff;
+        .rating-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .rating-bad { color: #ef4444; }
+        .rating-good { color: #10b981; }
+        .rating-ok { color: #f59e0b; }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .detail-box {
+            background: rgba(2, 6, 23, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .detail-box h4 {
+            color: #cbd5e1;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .detail-box ul {
+            margin: 0;
+            padding-inline-start: 20px;
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+
+        .detail-box ul li {
+            margin-bottom: 8px;
+        }
+
+        .conclusion-box {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(212, 175, 55, 0.05);
+            border-right: 4px solid var(--primary-color);
+            border-radius: 8px;
+            color: #e2e8f0;
             font-weight: 600;
         }
 
-        .status-bad { color: #ef4444; font-weight: bold; }
-        .status-ok { color: #f59e0b; font-weight: bold; }
-        .status-good { color: #10b981; font-weight: bold; }
+        body.lang-en .conclusion-box {
+            border-right: none;
+            border-left: 4px solid var(--primary-color);
+        }
 
+        .social-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .social-stat {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        .social-stat span {
+            color: #fbbf24;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -57,112 +138,208 @@
 
         <div id="content-ar" class="visible">
             <header class="hero">
-                <h1>تحليل المنافسين ⚔️</h1>
-                <div class="tagline">أين يقف MTK اليوم في سوق التدريب؟</div>
+                <h1>دراسة المنافسين التفضيلية ⚔️</h1>
+                <div class="tagline">تحليل عميق لنقاط ضعف السوق التي سنستغلها للسيطرة</div>
             </header>
 
-            <div class="card">
-                <div class="section-title">المشهد الحالي (The Landscape)</div>
-                <p>المنتج الخاص بنا (الدورات والمدربين) ممتاز، ولكننا نخسر الحصة السوقية لصالح مراكز قد يكون محتواها أضعف، لكن تسويقها أقوى وحضورها الرقمي يبعث على الثقة.</p>
+            <div class="competitor-grid">
                 
-                <table class="comp-table">
-                    <thead>
-                        <tr>
-                            <th>المركز</th>
-                            <th>قوة المنتج</th>
-                            <th>التواجد الرقمي (الموقع/السوشيال)</th>
-                            <th>ثقة العملاء (Social Proof)</th>
-                            <th>الخلاصة</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>المراكز الكبرى القديمة</td>
-                            <td><span class="status-ok">تقليدي وممل</span></td>
-                            <td><span class="status-good">قوي جداً وميزانيات ضخمة</span></td>
-                            <td><span class="status-good">آلاف التقييمات</span></td>
-                            <td>يعتمدون على الاسم القديم، لكنهم بطيئون في التطور.</td>
-                        </tr>
-                        <tr>
-                            <td>المنصات العالمية (Coursera/Udemy)</td>
-                            <td><span class="status-good">قوي وتفاعلي</span></td>
-                            <td><span class="status-good">ممتاز جداً</span></td>
-                            <td><span class="status-good">ملايين التقييمات</span></td>
-                            <td>محتوى عام غير مخصص لبيئة العمل السعودية.</td>
-                        </tr>
-                        <tr class="mtk-row">
-                            <td>MTK (الوضع الحالي)</td>
-                            <td><span class="status-good">قوي ومخصص للمحلي</span></td>
-                            <td><span class="status-bad">ضعيف جداً ومشتت</span></td>
-                            <td><span class="status-bad">شبه معدوم (4 تقييمات)</span></td>
-                            <td>منتج رائع مدفون بسبب ضعف التسويق.</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <!-- Competitor 1 -->
+                <div class="comp-card">
+                    <div class="comp-header">
+                        <div>
+                            <h2 class="comp-title">مركز MTK للتدريب</h2>
+                            <div class="comp-meta">تأسس 2022 | الرياض - حي النرجس | B2B (2-10 أفراد)</div>
+                        </div>
+                        <div class="rating-badge rating-ok">⭐ 5.0 (4 تقييمات فقط)</div>
+                    </div>
+
+                    <div class="details-grid">
+                        <div class="detail-box">
+                            <h4>🌐 الموقع وتجربة المستخدم</h4>
+                            <ul>
+                                <li>الموقع غير مستقر أحياناً.</li>
+                                <li>لا توجد دورات ظاهرة للعميل.</li>
+                                <li>تجربة معقدة ولا يوجد مسار شراء مباشر.</li>
+                            </ul>
+                        </div>
+
+                        <div class="detail-box">
+                            <h4>📱 التسويق والسوشيال ميديا</h4>
+                            <ul>
+                                <li>لا يوجد صفحات بيع أو آراء عملاء (Social Proof).</li>
+                                <li>التصميم البصري جيد، لكن المحتوى عشوائي ومتقطع.</li>
+                                <li><strong>انعدام التفاعل:</strong> الحسابات شبه ميتة رغم جودة الفكرة.</li>
+                            </ul>
+                            <div class="social-stats">
+                                <div class="social-stat">LinkedIn: <span>104</span></div>
+                                <div class="social-stat">TikTok: <span>55</span></div>
+                                <div class="social-stat">X: <span>35</span></div>
+                                <div class="social-stat">Instagram: <span>31</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="conclusion-box">
+                        <strong>الخلاصة:</strong> لديهم فكرة قوية وموجهة للشركات (B2B)، لكن التنفيذ والتسويق "ضعيف جداً". الثقة معدومة بسبب قلة التقييمات.
+                    </div>
+                </div>
+
+                <!-- Competitor 2 -->
+                <div class="comp-card">
+                    <div class="comp-header">
+                        <div>
+                            <h2 class="comp-title">مركز صناعة العبقرية للتدريب</h2>
+                            <div class="comp-meta">دورات إدارية وتطوير ذات | الأسعار: 180 إلى 2,000 ريال</div>
+                        </div>
+                        <div class="rating-badge rating-bad">⭐ 3.4 (41 تقييم)</div>
+                    </div>
+
+                    <div class="details-grid">
+                        <div class="detail-box">
+                            <h4>🌐 الموقع وتجربة المستخدم</h4>
+                            <ul>
+                                <li>الموقع قديم وعقيم برمجياً.</li>
+                                <li>يعمل كمتجر إلكتروني لعرض الدورات والأسعار.</li>
+                                <li>وسيلة التواصل الرئيسية (WhatsApp) يعانون من بطء الرد.</li>
+                            </ul>
+                        </div>
+
+                        <div class="detail-box">
+                            <h4>📱 التسويق والسوشيال ميديا (الكارثة)</h4>
+                            <ul>
+                                <li><strong>أرقام وهمية:</strong> 111 ألف متابع على انستقرام و 2 لايك فقط على البوستات!</li>
+                                <li><strong>عشوائية النشر:</strong> فيديو من 4 سنين، ثم فيديو من 8 شهور، ثم فيديو اليوم.</li>
+                                <li>تويتر (X): آلاف البوستات وتفاعل معدوم.</li>
+                            </ul>
+                            <div class="social-stats">
+                                <div class="social-stat">Instagram: <span>111.2K (وهمي)</span></div>
+                                <div class="social-stat">X: <span>341</span></div>
+                                <div class="social-stat">Facebook: <span>249</span></div>
+                                <div class="social-stat">TikTok: <span>41</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="conclusion-box">
+                        <strong style="color: #ef4444;">الخلاصة:</strong> "إدارة من تحت السلم". انعدام ثقة حقيقي لدى العملاء بسبب التقييمات السيئة (3.4) وشكاوى الناس من خدمة العملاء والباقات. المتابعين الوهميين يفقدونهم المصداقية تماماً.
+                    </div>
+                </div>
+
             </div>
 
-            <div class="card">
-                <div class="section-title">الميزة التنافسية (كيف ننتصر؟)</div>
+            <!-- Strategy -->
+            <div class="card" style="margin-top: 40px;">
+                <div class="section-title">كيف سيسيطر "معهد خبراء الجودة"؟ 🚀</div>
+                <p>بناءً على هذا التحليل، خريطتنا للسيطرة واضحة جداً وتعتمد على سد ثغرات المنافسين:</p>
                 <ul>
-                    <li>لن ننافسهم بالميزانيات الضخمة العشوائية.</li>
-                    <li>سننافسهم بـ <strong>التخصيص (Niche Targeting):</strong> استهداف مباشر لمدراء الموارد البشرية عبر LinkedIn.</li>
-                    <li>سننافسهم بـ <strong>تجربة مستخدم سهلة:</strong> تحويل الموقع من مجرد واجهة عرض إلى "أداة توليد عملاء محتملين" (Lead Gen Machine).</li>
+                    <li><strong>الضرب في مقتل الثقة:</strong> سنركز على جمع تقييمات Google Review حقيقية بمتوسط (4.8+) وشهادات فيديو، لنسحب العملاء المترددين من (صناعة العبقرية) الذي يملك تقييم 3.4.</li>
+                    <li><strong>الابتعاد عن الوهم:</strong> لن نشتري متابعين، بل سنبني محتوى مرئي (Reels) حقيقي يثبت خبرات المحاضرين، مما يعطي انطباع الفخامة والمصداقية.</li>
+                    <li><strong>تجربة مستخدم سهلة:</strong> عكس موقع (MTK) المعقد، سيبني معهدنا مسار تحويل (Funnel) واضح، من الإعلان للـ Landing Page، ثم شراء مباشر أو تواصل واتساب سريع خلال 5 دقائق.</li>
                 </ul>
             </div>
         </div>
 
         <div id="content-en" class="hidden">
             <header class="hero">
-                <h1>Competitors Analysis ⚔️</h1>
-                <div class="tagline">Where does MTK stand today in the training market?</div>
+                <h1>Detailed Competitors Analysis ⚔️</h1>
+                <div class="tagline">Deep dive into market weaknesses we will exploit to dominate</div>
             </header>
 
-            <div class="card">
-                <div class="section-title">The Landscape</div>
-                <p>Our product (courses and trainers) is excellent, but we are losing market share to centers that might have weaker content but stronger marketing and a digital presence that inspires trust.</p>
+            <div class="competitor-grid">
                 
-                <table class="comp-table">
-                    <thead>
-                        <tr>
-                            <th>Center</th>
-                            <th>Product Quality</th>
-                            <th>Digital Presence</th>
-                            <th>Social Proof</th>
-                            <th>Summary</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Large Traditional Centers</td>
-                            <td><span class="status-ok">Traditional/Boring</span></td>
-                            <td><span class="status-good">Very strong, huge budgets</span></td>
-                            <td><span class="status-good">Thousands of reviews</span></td>
-                            <td>Rely on legacy names, but slow to adapt.</td>
-                        </tr>
-                        <tr>
-                            <td>Global Platforms (Udemy)</td>
-                            <td><span class="status-good">Strong & Interactive</span></td>
-                            <td><span class="status-good">Excellent</span></td>
-                            <td><span class="status-good">Millions of reviews</span></td>
-                            <td>Generic content, not localized for the Saudi workplace.</td>
-                        </tr>
-                        <tr class="mtk-row">
-                            <td>MTK (Current State)</td>
-                            <td><span class="status-good">Strong & Localized</span></td>
-                            <td><span class="status-bad">Very weak & scattered</span></td>
-                            <td><span class="status-bad">Almost non-existent (4 reviews)</span></td>
-                            <td>A great product buried by poor marketing.</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <!-- Competitor 1 -->
+                <div class="comp-card">
+                    <div class="comp-header">
+                        <div>
+                            <h2 class="comp-title">MTK Training Center</h2>
+                            <div class="comp-meta">Est. 2022 | Riyadh | B2B (2-10 Employees)</div>
+                        </div>
+                        <div class="rating-badge rating-ok">⭐ 5.0 (4 Reviews)</div>
+                    </div>
+
+                    <div class="details-grid">
+                        <div class="detail-box">
+                            <h4>🌐 Website & UX</h4>
+                            <ul>
+                                <li>Unstable website at times.</li>
+                                <li>No visible courses to the client.</li>
+                                <li>Complex experience with no direct purchase path.</li>
+                            </ul>
+                        </div>
+
+                        <div class="detail-box">
+                            <h4>📱 Marketing & Social</h4>
+                            <ul>
+                                <li>No sales pages or client testimonials.</li>
+                                <li>Good visual design, but random and inconsistent content.</li>
+                                <li><strong>Zero Engagement:</strong> Almost dead accounts despite a good core idea.</li>
+                            </ul>
+                            <div class="social-stats">
+                                <div class="social-stat">LinkedIn: <span>104</span></div>
+                                <div class="social-stat">TikTok: <span>55</span></div>
+                                <div class="social-stat">X: <span>35</span></div>
+                                <div class="social-stat">Instagram: <span>31</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="conclusion-box">
+                        <strong>Conclusion:</strong> Strong B2B idea, but extremely weak execution and marketing. Zero trust due to lack of reviews.
+                    </div>
+                </div>
+
+                <!-- Competitor 2 -->
+                <div class="comp-card">
+                    <div class="comp-header">
+                        <div>
+                            <h2 class="comp-title">Genius Industry Center</h2>
+                            <div class="comp-meta">Management & Self-Dev Courses | Prices: 180 to 2,000 SAR</div>
+                        </div>
+                        <div class="rating-badge rating-bad">⭐ 3.4 (41 Reviews)</div>
+                    </div>
+
+                    <div class="details-grid">
+                        <div class="detail-box">
+                            <h4>🌐 Website & UX</h4>
+                            <ul>
+                                <li>Outdated and old-school website.</li>
+                                <li>Acts as an e-commerce store for courses.</li>
+                                <li>Main channel is WhatsApp, but they suffer from slow/no replies.</li>
+                            </ul>
+                        </div>
+
+                        <div class="detail-box">
+                            <h4>📱 Marketing & Social (Disaster)</h4>
+                            <ul>
+                                <li><strong>Fake Numbers:</strong> 111k IG followers with only 2 likes per post!</li>
+                                <li><strong>Random Posting:</strong> A video from 4 years ago, then 8 months ago, then today.</li>
+                                <li>Twitter (X): Thousands of posts with zero engagement.</li>
+                            </ul>
+                            <div class="social-stats">
+                                <div class="social-stat">Instagram: <span>111.2K (Fake)</span></div>
+                                <div class="social-stat">X: <span>341</span></div>
+                                <div class="social-stat">Facebook: <span>249</span></div>
+                                <div class="social-stat">TikTok: <span>41</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="conclusion-box">
+                        <strong style="color: #ef4444;">Conclusion:</strong> "Underground Management". Complete loss of customer trust due to bad reviews (3.4) and complaints. Fake followers destroy their credibility entirely.
+                    </div>
+                </div>
+
             </div>
 
-            <div class="card">
-                <div class="section-title">Competitive Advantage (How we win)</div>
+            <!-- Strategy -->
+            <div class="card" style="margin-top: 40px;">
+                <div class="section-title">How Quality Experts Will Dominate 🚀</div>
+                <p>Based on this analysis, our roadmap to dominance is clear and relies on exploiting competitor weaknesses:</p>
                 <ul>
-                    <li>We won't fight them with massive generic budgets.</li>
-                    <li>We will win through <strong>Niche Targeting:</strong> Direct B2B outreach to HR Managers via LinkedIn.</li>
-                    <li>We will win through <strong>Frictionless UX:</strong> Turning the website from a brochure into a Lead Gen Machine.</li>
+                    <li><strong>Striking at Trust:</strong> We will focus on collecting real 4.8+ Google Reviews and video testimonials to steal hesitant clients from competitors with bad ratings.</li>
+                    <li><strong>No Fake Numbers:</strong> Instead of buying followers, we will create real, high-quality Reels proving our instructors' expertise, projecting luxury and credibility.</li>
+                    <li><strong>Frictionless UX:</strong> Unlike MTK's complex site, we will build a clear conversion funnel from ad to Landing Page, to direct purchase or a fast 5-minute WhatsApp response.</li>
                 </ul>
             </div>
         </div>
@@ -170,7 +347,7 @@
     </div>
 
     <footer>
-        <p>© 2026 MTK. All rights reserved.</p>
+        <p>© 2026 Quality Experts. All rights reserved.</p>
     </footer>
 
     <script src="nav.js"></script>
